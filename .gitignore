@@ -1,0 +1,8 @@
+*.el
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.log
+*.toc
+/masters-thesis.tex~
