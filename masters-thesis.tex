@@ -34,7 +34,7 @@ Back in 1970s iterative and incremental development (IID) approach was already b
 
 1980s consisted of vast amount of criticism in literature towards unquestioned dominance of waterfall in industry \cite{larman2003iterative}, advocating IID approach, with notable 1985 Barry Boehm's publication ``A Spiral Model of Software Development and Enhancement''. It introduced risk assessment and project review in each iteration along with development phase using appropriate management model. During that time there were well documented significant project failures by US Department of Defense using document-driven waterfall approach, which resulted in adjusting formal standards (DoD-Std-2167A) to encourage usage of IDD.
 
-In 1990s, software development industry was much more aware of IID practices and there were many books, articles and standards promoting IID. In second half of 1990s most currently known methodologies were created - Scrum, eXtreme Programming (XP), Rational Unified Process, Dynamic Systems Development Method and Feature Driven Development.
+In 1990s, software development industry was much more aware of IID practices and there were many books, articles and standards promoting IID. In second half of 1990s most currently known methodologies were created - Scrum, eXtreme Programming (XP), Lean Software Development, Rational Unified Process, Dynamic Systems Development Method and Feature Driven Development.
 
 In 2001, a group of 17 methodologies experts, including all of above mentioned met in Utah to discuss common practices and the term ``Agile'' was coined.
 
@@ -54,38 +54,77 @@ Among agile practices, Scrum is undeniably the most commonly chosen methodology 
 
 Since the creation of agile, the industry has also moved forward by leaps and bounds in technical areas. Automation is now common in software process - quality assurance, continuous integration and continuous delivery, internet as development environment, distribution means and execution infrastructure. Not to mention great progress in languages, tools, frameworks and architectural solutions. \cite{fuggetta2014software}
 The progress is unquestionable and although large IT projects were once notorious for spectacular failures (famous E.Yourdon's ``Death March'' \cite{yourdon1997death}), reported project success rates (meeting budget and time constraints and project goals) in various studies from went from barely 20-30\% in 2000s \cite{kaur2013software} to 60-70\% in 2017 \cite{pmi2017pulse}.
-% is Death March reference necessary?
-% isn't those stats too poor & cheesy?
+% is Death March reference necessary? no it's not.
+% isn't those stats too poor & cheesy? yes they are.
 
-% TODO Lean Methodology and Startups more verbosely, it's my area of interest!
-One particular area, where statistics are not optimistic are startups, where ``great majority of such companies fail within two years of their creation'' \cite{paternoster2014software} and ``more than 90\% of startups fail, due primarily to self-destruction rather than competition'' \cite{giardino2014early}.
+\subsection{User Centered Design}
+User Centered Design is part of Human-Computer Interaction domain, which primary focus is on designing and  creating interactive systems with the aim to make them user-oriented and usable. It's a very broad domain, focused not only on computer science and engineering, but incorporating knowledge from various research fields such as cognitive and social psychology, human factors and ergonomics, industrial design and many others. Historically it's been occupied with trying to grasp the nature of human interaction with machines. \cite{ritter2014user}
 
-During recent years of ``agile methods reigns'' there came natural realization that agile approaches are not silver bullets as they have limitations due to organizational and development environments in which they are incorporated and that they can be extended to address their limitations. Paradoxically, those extensions are often in the form of more ``traditional'' development process approaches \cite{turk2014assumptions}.
+In 1950s the approach was called ``System Ergonomics'', it offered a holistic approach - systems and users were seen as single interacting system. In 1960s and 1970s there were ``Cognitive Systems Engineering'' and ``Socio-Technical Systems Design''. Cognitive Systems Engineering was an answer to rapid increase of use and evolution of computer-based technologies, where role of people changed from observing and controlling machinery and equipment to very interactive usage. It was concerned in models of how people perceive, process and use information to achieve their goals. Socio-Technical Systems Design focused on interaction between people and technology in workplaces and organizations, trying to optimize organizational performance and improve humanistic aspects.
 
-% TODO bring usability to this section 
-Next section will cover state of the art of proposed agile extensions.
- 
-%todo failure statistics, additional source.
+Another research area was ``Cognitive Modeling''. It originated from late 1950s and it's goal is to approximate people's basic cognitive processes and reasoning, explain them and predict how they'll evolve under particular conditions. It first focused on how people solve problem symbolically - taking input in form of symbols, manipulating them and producing output. Later it addressed how information is taken from external world, especially when using computer systems. The approach later evolved in creating models for human-computer interactions, such as Human Model Processor, GOMS (Goals, Operators, Methods and Selection rules), Keystroke Level Models and Programmable User Models.
+
+User Centered Design (UCD) term was coined in 1986 in Norman and Draper work: "User Centered System Design; New Perspectives on Human-Computer Interaction". As Endsley describes in his book \cite{endsley2016designing}, UCD was an answer to a trend of ``Technology-Centered Design'', and key principles were to:
+\begin{itemize}
+    \item Focus on user's goals, tasks and abilities
+    \item Organize technology around the way users process information and make decisions
+    \item Keep the user in control and aware of state of the system
+\end{itemize}
+
+A very related movement was that of Human-Centered Design, which considered not only users in interaction with the system, but noticed human capabilities and limitations and the need to understand them. An examples for need for such approach are when the user might not directly interact with the system (as in elderly healthcare monitoring) or how to design systems with consideration for people with social interaction disorders (e.g. autism). Human Centered Design activities are the subject of ISO standard 9241-210:
+\begin{enumerate}
+  \item Understanding and specifying the context of use (including users, tasks, environments)
+  \item Specifying the user requirements in sufficient detail to drive the design
+  \item Producing design solutions that meet these requirements
+  \item Conducting user-centered evaluations of these design solutions and modifying the design to take into account the results.
+\end{enumerate}
+
+Nowadays the very known popular terms related to this domain are ``User Experience'' and ``Usability''. The former is defined as ``a person's perceptions and responses that result from the use or anticipated use of product, system, or service'' (ISO 1941-210), but also describes person's beliefs and emotions. The latter term is focused on how different tasks in systems are accomplished by the users and what errors do they make in progress - it can be used as interface validation method. 
+
+\subsection{Startups}
+Software startups are increasingly popular nowadays and the huge success of companies like Facebook, Spotify, Linkedin and many others as well as very accessible technologies encourage many to create their companies and try to quickly enter new, emerging markets. From software process methodologies point of view, those undertakings are of particular interest, as those young companies operate under time and financial pressure to create the right product for the right market in very uncertain conditions. Some of those companies succeed and many fail - in fact, a recently quoted statistics say that ``great majority of such companies fail within two years of their creation'' \cite{paternoster2014software} and ``more than 90\% of startups fail, due primarily to self-destruction rather than competition'' \cite{giardino2014early}. As startups situation differs from established companies, they need a specialized approach. 
+
+In fact, to answer this need, Eris Ries proposed the Lean Startup approach and in his 2011 book he defined startup as ``a human institution designed to deliver a new product or service under conditions of extreme uncertainty''\cite{ries2011lean}. Steve Blank, who influenced Eric Ries' ideas highlights 3 key principles of Lean Startup method \cite{blank2013lean}:
+\begin{itemize}
+  \item Instead of creating intricate business plan based on mostly guesswork, summarize hypotheses in a framework called ``business model canvas''
+  \item Use ``Customer Development'' practices (created by Steve Blank) to test hypotheses - create Minimal Viable Product (MVP) to get feedback from customers and then do Build - Measure - Learn cycles, using metrics allowing for verifying learning and then doing ``pivots'' when hypothesis turns out to be wrong
+  \item Use agile methods to develop Minimal Viable Product. In fact, Lean Startup has it's name after Lean Software Development method, created in 2003 by Mary and Tom Poppendieck \cite{poppendieck2003lean}. This approach was adapted from Toyota Production scion-technical system and focused on eliminating waste and amplifying learning.
+\end{itemize}
+
+Furthermore, Steve Blank argues that most common failure factors at startups were the high cost of acquiring first customers, even higher cost of creating the wrong product and too long development cycles. Lean Startup approach, in his opinion, helps to counter those limitations and make startups less risky. What's more, it starts to be taught at universities and is becoming increasingly well adopted in the industry.
+
+\subsection{State of the Art}
+During recent years of ``agile methods reigns'' there came natural realization that agile methods are not silver bullets as they have limitations due to organizational and development environments in which they are incorporated, particularly they might be limiting for distributed development environments, large teams and large, complex software \cite{turk2014assumptions}. Those findings seem to be consistent with Kenneth Rubith, who in his book about Scrum, the most widely adopted agile methodology, compared various domains of decision making (using Cynefin framework) and came to the conclusion that while Scrum is a great fit for ``Complex'' domain, it's not the best approach for ``Complicated'', ``Chaotic'' and ``Disorder'' domains \cite{rubin2012essential}, and the last two are often met in startup environments. However, agile methods can be extended to address their limitations. Paradoxically, those extensions are often in the form of more ``traditional'' development process approaches \cite{turk2014limitations}.
+
+As agile practices are now mainstream and have been there for a while, they are now very well defined and are huge areas and so research related to them has diverged into many branches. Traditionally there are surveys and mapping studies, which try to quantitatively measure the trends and answer questions such as what particular practices are used the most in the industry (time boxing, planning meeting, daily discussions) and what domains are they mostly used in \cite{diebold2014agile}. However, most research activity seems to be at the intersection of agile practices with various domains, most often domains representing more ``traditional'' approaches.
+
+As an example Chen Yang \cite{yang2016systematic} studied how to combine Software Architecture, that is practices related to high level system design with careful assessment of trade-offs, which was initially critiqued for ``Big Design Up-Front'' leading to excessive documentation and implementation of unneeded features. But the question remained - ``how much design is enough for different classes of problems'' and architecture design in early iterations, architecture freeze in later stages and iterative delivery documentation were some of most representative advises found.
+
+Another example is a study about integrating Requirements Engineering. Research about software projects failure rate and factors suggests that among mostly reported causes is too much time spent on rework and creating the product out of sync with business due to poor requirements engineering. \cite{arcidiacono2017comparative}. Requirements Engineering provides in-depth description of practices related to requirements elicitation (interviews, focus groups), analysis (prioritization and modeling), documentation and validation (often with prototyping). Agile Requirements Engineering (RE) differs from traditional RE mostly because of iterativeness - instead of specifying complete specification at the beginning, which most often would be infeasible, requirements are specified iteratively and very often reprioritized (Scrum recommends practice addressing it called ``Backlog Grooming'' every Sprint\cite{rubin2012essential}). The often found challenge in Agile RE lies in neglecting nonfunctional requirements, because customers are for the most part not preoccupied with technical intricacies developers must face. Often reported causes of problems were ignoring critical aspects like scalability and performance at early stages, which inhibited growth later on. Overall, once claimed as heavyweight, Requirements Engineering have found their place in agile-dominant industry. Researchers emphasize the importance of ``intensive communication between the developers and customers as the most important RE practice''. \cite{paetsch2003requirements} \cite{cao2008agile} 
+
+By far most spotlight, however, was directed at the intersection of Agile and User Centered Design communities.
+
+\subsubsection{Agile and User Centered Design}
+%Well defined - examples from workspace 7.
+
+\subsubsection{Startups and Lean UX}
+% Not so well defined, workspace 3
+
+And thus conclusion - it's missing, I'm gonna do it!
+
+% TODO move it to chapter below
+Little literature \cite{paternoster2014software}, different definitions?
+``A Startup is a temporary organization designed to search for a repeatable and scalable business model'' \cite{blank2012startup}.
 
 % todo Requirements Engineering: The State of the Practice - 35 percent of respondends in large corporations doing waterfall, so little agile. Newer study welcome
 
-%\subsection{Scrum}
-%Scrum also naturally dominant in literature. \cite{diebold2014agile}
-% todo: repeat results from Agile Survey?
-% todo: mention different types of domains
-% \cite{rubin2012essential}
-\subsection{State of the art - Agile and Usability}
-% todo intro
-Recent agile - related research has diverged into many branches. One of those tries to quantitatively answer to questions such as what particular practices are used the most in the industry (time boxing, planning meeting, daily discussions) and what domains are they mostly used in.\cite{diebold2014agile}
-Summarize the one about Architecture.
-
-\subsection{Usability}
-Brief history to summarize. \cite{ritter2014user}
-\subsection{Startups as area of interest}
 \section{Problem formulation and methodology}
 \section{DNCR Documentation}
 \section{Solution evaluation}
 \section{Conclusion}
-\bibliographystyle{plain}
+\begin{itemize}
+  \item Convergence of ideas from various research fields related to software development efforts around customer
+  \item 
+\end{itemize}\bibliographystyle{plain}
 \bibliography{masters-thesis} 
 \end{document}
