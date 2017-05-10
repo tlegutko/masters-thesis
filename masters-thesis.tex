@@ -1,4 +1,14 @@
 \documentclass{article}
+\usepackage{titlesec}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
 \title{A study on user-centered design illustrated by development of social platform for dance classes attendees}
 \author{Tomasz Legutko}
 \date{2016/2017}
@@ -105,26 +115,69 @@ Another example is a study about integrating Requirements Engineering. Research 
 By far most spotlight, however, was directed at the intersection of Agile and User Centered Design communities.
 
 \subsubsection{Agile and User Centered Design}
-%Well defined - examples from workspace 7.
+Agile is now mainstream, but naturally through it's focus on lightweight approach it doesn't cover all the possible needs. Particularly, Agile community doesn't extensively discuss users or user interfaces, none of most used Agile methodologies includes explicit guidance in the area of usability and there is usually no notion of user interface specialist. Generally, applicability of usability practices in agile systems is considered deficient, with agile methods focusing primarily on iterative deliveries of working features to customers. Meanwhile, the priority of UCD is user satisfaction, and although there exists ``philosophical and principled differences between Agile methods and UCD in focus, evaluation method, culture and documentation'', there's been a lot of effort in community to define practices using both philosophies and they have been referred to as Agile and User Centered Design Integration (AUCDI) or, most often, simply Agile UX. \cite{salah2014systematic}\cite{jurca2014integrating}
 
-\subsubsection{Startups and Lean UX}
-% Not so well defined, workspace 3
+\paragraph{Agile User Centered Design Patterns}
+AUCDI patterns are described using for each stage of Human Centered Design Process ISO 13407 standard \cite{bertholdo2014agile}\cite{bertholdo2016agile} :
+\begin{enumerate}
+ \item Identify Needs for Human-Centered Design
+ \begin{itemize}
+     \item Sprint Zero
+     \item One Sprint Ahead
+     \item UX Specialists as Product Owners 
+     \item Users time is valuable
+     \item Parallel Tracks
+     \item UX Specialists as Full-Time Member of the Agile Team
+ \end{itemize}
+ \item Specify Context of Use
+ \begin{itemize}
+     \item Little Design Up Front
+     \item Contact Plan of Users
+ \end{itemize}
+ \item Specify Requirements
+ \begin{itemize}
+     \item User Stories
+     \item More collaboration, less documents
+     \item Prototypes as specification
+ \end{itemize}
+ \item Create Design Solutions
+ \begin{itemize}
+     \item Low fidelity prototyping
+     \item High fidelity prototyping
+     \item Design Studio
+     \item Collaborative and Participative Design
+ \end{itemize}
+ \item Evaluate Designs
+ \begin{itemize}
+     \item Tests with users
+     \item Evaluation by inspection
+     \item RITE method
+     \item Acceptance tests
+ \end{itemize}
+\end{enumerate}
+All stages of above mentioned patterns should be incorporated for each batch of features in agile iteration. Those patterns are not meant to be used with great formality, their purpose is to share knowledge so teams can select patterns that best fit their specific development environment  \cite{bertholdo2016agile}.
 
-And thus conclusion - it's missing, I'm gonna do it!
+\paragraph{Usage of Agile UX in industry}
+Various reports seem to agree that usage of usability practices in surveyed companies have been increasing in recent years. The most established practices in industry seem to be Little Design Up Front (LDUF), Sprint 0, designing one sprint ahead and close collaboration between agile team and UX team. In fact, interaction between agile and UX teams has been reported to be the source of most challenges and pitfalls - namely overworking understaffed UX designers, power struggle with not clearly defined roles of teams, as well as work coordination and communication issues. \cite{salah2014systematic}\cite{jurca2014integrating}.
 
-% TODO move it to chapter below
-Little literature \cite{paternoster2014software}, different definitions?
-``A Startup is a temporary organization designed to search for a repeatable and scalable business model'' \cite{blank2012startup}.
+As agile and UX teams collaboration receives the most attention in various reports, the ``parallel interwoven creation tracks'', where design team works ahead of implementation team (``one sprint ahead'') and uses artifacts as central means of communication seems to be the most advised approach \cite{brhel2015exploring}. Scrum seems to be proposed as the most fitting methodology for incorporating UX practices, as teams can plan together each sprint during Backlog Grooming and can both attend daily Stand-Ups. Moreover, UX member is proposed to be included to Scrum team on daily basis, as part of developer team \cite{ovad2015prevalence}.
 
-% todo Requirements Engineering: The State of the Practice - 35 percent of respondends in large corporations doing waterfall, so little agile. Newer study welcome
+There have even been created dedicated framework dedicated to integrating usability engineers into an agile team called Extreme Scenario Based Design Approach (XSBD), with COSBY variant, focusing on explicit usability related metrics, but they have yet to receive broad attention \cite{jurca2014integrating}.
 
+\subsubsection{Startups}
+Despite the phenomenon in recent years of newly created software companies quickly achieving huge success and receiving wide public attention and recognition, research of this topic is scarce. Startups don't have agreed on definition and they are mostly described through context of their activities, that is extreme uncertainty (as in Eric Ries ``Lean Startup'' \cite{ries2011lean} definition), little to no operating history, lack of resources, intensive time pressure, quick time to market and innovativeness. Due to that, reports state that many startups don't use well defined processes, but opportunistically select practices when needed. The same approach is applied to requirements, documentation, architecture and metrics. Managerial practices are reduced to bare minimum and developers are empowered to creatively adapt to several roles.
+\cite{paternoster2014software}.
+
+\paragraph{Lean UX}
 \section{Problem formulation and methodology}
-\section{DNCR Documentation}
+Case study.
+\section{DNCR project summary}
 \section{Solution evaluation}
 \section{Conclusion}
-\begin{itemize}
-  \item Convergence of ideas from various research fields related to software development efforts around customer
-  \item 
-\end{itemize}\bibliographystyle{plain}
+% \begin{itemize}
+%   \item Convergence of ideas from various research fields related to software development efforts around customer
+%   \item 
+%   \end{itemize}
+\bibliographystyle{plain}
 \bibliography{masters-thesis} 
 \end{document}
