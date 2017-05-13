@@ -7,3 +7,4 @@
 *.toc
 /masters-thesis.tex~
 references/
+*.org
