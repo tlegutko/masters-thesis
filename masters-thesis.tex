@@ -1,6 +1,11 @@
 \documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage[section]{placeins}
 \usepackage{titlesec}
 
+\newcommand{\sectionbreak}{\clearpage}
 \titleformat{\paragraph}
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}
@@ -28,7 +33,7 @@ One important area, where those practices cannot be easily applied is in startup
 
 But as Agile could benefit from User Centered Design practices, so could Lean Startup, and the scientific effort in this area resulted in Lean UX approach. But the research on this topic is scarce and in an attempt fill the gap author decided to perform case study of his own startup in the light of Lean UX advises in order to present lessons learned and provide guidelines for industry practitioners.
 
-\section{Introduction} % maybe State of the Art?
+\section{Introduction}
 \subsection{Brief history of software development process}
 Nowadays, agile methods are without a doubt an IT industry standard. But many think of them as just a replacement for waterfall, while iterative and incremental development dates as back as to mid-1950s, with few well documented undertakings by IBM and NASA \cite{larman2003iterative}.
 
@@ -222,15 +227,112 @@ The effort to merge those two domains resulted in Lean UX approach, but though t
 \section{Problem formulation and methodology}
 In attempt to fill the gap in research, the author decided to perform case study on applying Lean UX approach in author's startup.
 
-TODO
+Research Questions: to do
 
-\section{DNCR project summary}
-\section{Solution evaluation}
+The data was collected through:
+\begin{itemize}
+  \item project documentation analysis
+  \item team meeting at the end of project 
+  \item personal experience of author attending the project 
+\end{itemize}
+The documentation analysis was performed by browsing the electronic collaboration tool environments used by the team.
+
+\section{DNCR project}
+
+\subsection{DNCR product vision}
+The idea for a project was a two-step vision. First step was to create a solution for dance schools, which would allow to ease and automate most dance school's business procedures for receptionists and managers, such as calendar management, payment management (with electronic payments along with handling late payers), easy (and automatic) notifications for all course attendees and client history, profiles and statistic, which would improve business and marketing capabilities of dance company. We called this product ``DNCR'' (pronounced ``dancer'').
+
+The second step was focused at attendees. The main idea was to create a search engine integrated with DNCR, so all the schools using DNCR could easily provide always up-to-date calendar and people could quickly compare dance schools and courses to find the exact dance class they need and enroll, as well as handle payments online and review the course, school and instructors later. This way DNCR would become not only business process support service for dance schools but also a great opportunity to access potential new clients.
+
+This idea could later be expanded in various ways, depending on what would prove the most value to customers, with possibilities from building dance-oriented community to adapting the solution to solve similar problems in numerous domains - fitness and wellness centers, language schools and so on.
+
+Dance schools were chosen as a primary target as they are narrow-enough market to solve their exact, specific problems and small-enough so there wouldn't be many existing specialized solution (market was not saturated). Moreover, few of co-founders were either active dancers or have attended dance classes in the past, so they already had some domain knowledge and contacts with some dance schools.
+
+\subsection{Project timeline}
+\subsubsection{Project start}
+The project started 22.06.2016, when one of co-founders brought idea along with the first client to 6 other developers (all 7 developers had months of experience working professionally in the same company). The idea was refined and basic working rules were set concerning distribution of profits and amount of working hours spent each month - 1 person worked full-time, 6 others agreed to work for \( \frac{1}{4} \) - \( \frac{1}{5} \) full-time equivalent along with their current jobs. The team decided to focus on Kraków and Silesia as the regions where they had most befriended dance schools.
+
+Week later the team had our Minimal Viable Product (MVP) vision, along with initial list of requirements, mainly basic dance courses, attendees, instructors and payments management and email notifications. The team considered it the most basic ``notebook replacement'' version and scheduled first release for October, when academic year starts, and as students are one of main dance schools targets - most courses would be started.
+
+\subsubsection{First month - market research}
+At this point the team only knew they had one customer in need for their solution, but they needed to know a lot more.
+
+\paragraph{Quantitative local market analysis}
+The first action to take was to approximate the size of targeted market and to have better understanding of currently used solutions. In order to do that, the team analyzed all dance school websites and estimated school's size, website and schedule quality and ability to enroll online. Findings were promising - out of 35 dance schools in Kraków and 45 in Silesia only 8 had websites without schedule, 13 had no dedicated website and only 10 allowed some form of online enrolling (usually via non interactive html form). Existing sites and schedules were mostly of poor quality and none of the websites offered online payment possibility.
+
+Another aspect of quantitative research was a survey among dance classes attendees, distributed online. Out of 37 respondents, most was very enthusiastic about online payments (60\%) and ability to compare courses and schools online (60\%) and dissatisfied (70\%) with their schools current schedules. Among encountered problems with schools, respondents pointed out inability to pay in other form than cash and lack of notification when class was rescheduled.
+
+\paragraph{Qualitative local market analysis}
+The ction, done simultaneously with previous ones, was along with Lean Startup advice, to ``Get Out Of The Building'' and to talk to potential customers. Qualitative, in-depth interviews were performed with initial client from Kraków and his 2 receptionist and with one potential client from Silesia. Another two, more brief interviews, were performed with 2 additional schools. The purpose was to identify currently applied solutions (mostly paper notes + Excel or huge ERP system) and their limitations. Several factors were identified, the bottom line being that initial system vision seemed to be the right direction. Both in-depth interviewed schools had problem with late-payers and were not satisfied with their current solutions.
+
+\paragraph{Competitive products audits}
+The team was initially aware of two related products. One was loyalty program software the first client was about to buy and the other was complex club management software for large fitness centers. The team soon reviewed demonstration versions of both applications, evaluated them and their target markets and decided that they are not direct competition, but many things can be learned (both business and user-interface-wise).
+
+Later a more detailed competitive products analysis was performed, and extending scope to gym and fitness centers management software, 41 solutions (including above mentioned) were found, operating mostly in US. Out of them, 9 demonstration versions were reviewed. Several similar markets were identified (individuals needing to manage their schedules and let clients make appointments online, solutions for ballet dance companies which help to organize ballet performances and complex solutions that worked for both dance companies and fitness / spa / wellness / yoga and other similar domains). Some of those product boasted tens of thousands cooperating companies, so the main takeaway was that if there is such a huge demand outside of Poland, then there should be great market opportunity to explore.
+
+9 of identifies solutions offered polish version, but was mostly targeted at gyms and fitness centers. 1 direct competitor focused on dance schools was identified, providing most of intended DNCR features, but they were not marketing / growing aggressively and evaluating their demonstration version team decided that there are many ways the experience can be improved.
+
+As far as dance courses search engine go, there were two sites attempting to aggregate dance schools and allow to search among them, but they both had the same problem - they had very outdated data, inserted manually some time ago, poor searching capabilities and seemed to be more or less abandoned. The DNCR solution, as mentioned, would integrate with search engine, so data would be always up to date. There is capable search engine for Benefit Multisport Card customers, popular and honored card in dance schools, but it's main problem is limitation to their customers. Some foreign search engines were identified, but they all limited results to their chain of dance schools. From survey the team performed there appeared two additional ways to search for dance course online - via Facebook or Google, but although Google provides nice visualization on map and some opinions and Facebook provides likes and reviews, they don't offer in-depth comparison of courses, based on their type, hours, skill level etc.
+
+\paragraph{Market research conclusion}
+The team performed both qualitative and quantitative market and competition analysis and was confident that there is market opportunity to explore, especially considering demand for foreign solutions. Evaluating many existing solutions allowed to explore many ways to implement business model (pricing and payment options), domains to explore and user interface ideas and shortcomings. The team started drafting business model document, as simultaneously to research and implementation effort, the team looked for a way to legalize their company.
+
+\subsubsection{Next months - mostly implementation}
+
+\paragraph{Architecture and technologies}
+
+
+from this point forward only trello
+
+\paragraph{Mockups and GUI vision}
+
+
+\paragraph{Meeting with client and design validation}
+
+\paragraph{Meeting with subject matter expert}
+
+\subsubsection{Pivoting idea - ZnajdźTaniec.pl}
+
+\subsubsection{Decision to end the project}
+Project ended 01.12.2016 with project summary meeting.
+
+\section{DNCR project evaluation}
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{dncr-funeral}
+    \caption{DNCR project summary made collaboratively by the whole team during the meeting when the decision has been made to discontinue the project}
+    \label{fig:dncr-funeral}
+\end{figure}
+\FloatBarrier
+
+\begin{itemize}
+  \item From the very beginning the progress was too slow, it was caused mainly by the team's inexperience with web technologies 
+  \item Almost whole project was spent on creating MVP, the team didn't reach Lean Startup's Build-Measure-Learn cycle
+  \item Inappropriate architectural decisions - PHP as backend stack instead of Java, beta Angular 2, focusing on too much polished solution (handling multiple device sizes) when team didn't have experience and it was slowing us down
+  \item Lack of leadership
+  \item Lack of same-place collaboration, remote working didn't work out with inexperienced team
+  \item No consequences for mediocre performance - underperformers dragged the whole team's morale down
+  \item Too much focus on future needs, to little focus on simplest solutions
+  \item Need to balance learning and growth effective implementation and functionality growth
+  \item Learning Lean Startup methodology during our project meant we still didn't really understand it and we truly learned it on our own mistakes
+  \item We were not the only team with such problems \cite{may2012applying}, unfortunately we didn't have that knowledge during our project
+  \item Lack of experience in many startup-related areas leads to great learning, but also, unsurprisingly, lack of good results
+  \item Minimal Viable Product is a great idea our team didn't really understand. Building MVP for 5 months means not building it correctly
+\end{itemize}
+
+\subsection{Study limitations}
+Generalizability of results of one case study, but it's fine \cite{flyvbjerg2006five}.
+Do something similar to threats to validity in \cite{sfetsos2016integrating}.
+
+Because startup failed quite early, many aspects could not be studied in depth.
 \section{Conclusion}
-% \begin{itemize}
-%   \item Convergence of ideas from various research fields related to software development efforts around customer
-%   \item 
-%   \end{itemize}
+\subsection{Future work}
+\begin{itemize}
+  \item Software startup is not only about software, it's also about legal aspects, acquiring funding, marketing - it's still not explored in literature
+  \item Still little synthesized experience report on startups (especially those failed)
+  \item Metrics on tracking progress in early phases of startup (MVP building), before having clients to perform usability tests / cohort analysis and so on.
+  \end{itemize}
+\newpage
+\listoffigures
 \bibliographystyle{plain}
 \bibliography{masters-thesis} 
 \end{document}
