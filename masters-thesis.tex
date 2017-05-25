@@ -275,19 +275,54 @@ Later a more detailed competitive products analysis was performed, and extending
 As far as dance courses search engine go, there were two sites attempting to aggregate dance schools and allow to search among them, but they both had the same problem - they had very outdated data, inserted manually some time ago, poor searching capabilities and seemed to be more or less abandoned. The DNCR solution, as mentioned, would integrate with search engine, so data would be always up to date. There is capable search engine for Benefit Multisport Card customers, popular and honored card in dance schools, but it's main problem is limitation to their customers. Some foreign search engines were identified, but they all limited results to their chain of dance schools. From survey the team performed there appeared two additional ways to search for dance course online - via Facebook or Google, but although Google provides nice visualization on map and some opinions and Facebook provides likes and reviews, they don't offer in-depth comparison of courses, based on their type, hours, skill level etc.
 
 \paragraph{Market research conclusion}
-The team performed both qualitative and quantitative market and competition analysis and was confident that there is market opportunity to explore, especially considering demand for foreign solutions. Evaluating many existing solutions allowed to explore many ways to implement business model (pricing and payment options), domains to explore and user interface ideas and shortcomings. The team started drafting business model document, as simultaneously to research and implementation effort, the team looked for a way to legalize their company.
+The team performed both qualitative and quantitative market and competition analysis and was confident that there is market opportunity to explore, especially considering demand for foreign solutions. Evaluating many related existing solutions allowed to explore many ways to implement business model (i.e. pricing and payment options), domains to explore and user interface ideas and shortcomings. The team started drafting business model document, as simultaneously to research and implementation effort, the team looked for a way to legalize their company.
 
-\subsubsection{Next months - mostly implementation}
+\subsubsection{First month - Architecture and technologies}
+The team consisted of 6 developers who worked on desktop Java application on daily basis and one developer experienced with PHP and web technologies. The architecture was pretty standard these days - DNCR was decided to be a web app with server, as it would be easiest to distribute and quickly introduce new changes, as well to introduce web search engine later on.
 
-\paragraph{Architecture and technologies}
+For front-end, the team decided to create a Single-Page-App (SPA), as there are many frameworks with great support that would ease learning. Despite Facebook React vast popularity, the team decided on Angular framework from Google (despite it being beta before 2.0 version at that time), as it seemed more opinionated and provided more complete, all-in-one solution that would be easiest to grasp by team consisting mostly of developers inexperienced with web technologies. Typescript was chosen instead of Javascript, as it was both promoted by Angular and the team used to static typing was enthusiastic about retaining some typing capabilities.
 
+For back-end, after initial research of server and maintenance cost, as well as seemingly uncomplicated server-side logic, Java was quickly ruled out. Initially the team decided to choose Ruby on Rails, due to cheap servers, expressive language and expressive language, but as no one on the team had experience with this language and framework, the decision was made to use PHP instead, with Laravel 5 framework and have at least one expert on the team.
 
-from this point forward only trello
+As for database, the model was characterized by relations between course attendees, courses, payments, instructors and dates, so it could be naturally modeled with relational database, and so the team picked MariaDB. It was accessed using Laravel Active Record ORM - Eloquent. The schema, created a little bit later, is presented in Figure \ref{fig:schema}.
+
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{schema}
+    \caption{Schema of DNCR database}
+    \label{fig:schema}
+\end{figure}
+
+Another decision has been made to use Docker images running the exact same environment as the team had on their server, that is Debian with Apache configured to serve both minimized Javascript front-end app and handle API calls to backend PHP app. This was used during development so that all developers on the team, despite working on different operating systems would have the exact same server environment with the same dependencies and versions of each component. Another, very similar Docker image was used for Continuous Deployment, run against each Pull Request to ensure that application didn't break in some unexpected way.
+
+For easy collaboration, the team initially used Asana, later Trello to manage amount of work in progress (WIP) via Kanban board. For git, private GitHub repository was used and all the tools were integrated with Slack, used for instant messaging. 
+
+\subsubsection{Next months - focus on implementation}
+Having made market research to gain confidence in initial direction and having made technological decisions and developer environment all set up, in late July the team decided to focus all efforts on implementation in order to have MVP ready for October.
 
 \paragraph{Mockups and GUI vision}
+A very important aspect of the project was Graphical User Interface, because one of main problems it was solving was manual and repetitious actions needed to be performed by receptionist - the team was aiming to make them easy and convenient. From the beginning it was clear that interface would evolve around some view of calendar. At first the team discussed the GUI using low-fidelity sketch on paper, and then, for implementation reference, as well as for GUI validation with the client, high-fidelity GUI prototype was prepared using Balsamic program. Figures \ref{fig:gui-sketch}, \ref{fig:gui-balsamic} and \ref{fig:gui-angular} present the same view evolution from low-fidelity sketch to actual application.
 
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{gui-sketch}
+    \caption{Low fidelity GUI sketch presenting calendar and selected course in single view}
+    \label{fig:gui-sketch}
+\end{figure}
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{gui-balsamic}
+    \caption{High fidelity GUI prototype using Balsamic program, same view as presented in Figure \ref{fig:gui-sketch}}
+    \label{fig:gui-balsamic}
+\end{figure}
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{gui-placeholder}
+    \caption{Actual application in Angular, same view as in Figures \ref{fig:gui-sketch} and \ref{fig:gui-balsamic}}
+    \label{fig:gui-angular}
+\end{figure}
 
 \paragraph{Meeting with client and design validation}
+
+
+\paragraph{Collaboration model?}
+How we worked together, what worked and what didn't. Mostly what didn't.
 
 \paragraph{Meeting with subject matter expert}
 
