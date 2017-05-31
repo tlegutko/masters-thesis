@@ -288,19 +288,16 @@ As for database, the model was characterized by relations between course attende
 
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{schema}
-    \caption{Schema of DNCR database}
+    \caption{Schema of DNCR database presents relations between dance school (company), courses, attendees, payments and instructors / administrators.}
     \label{fig:schema}
 \end{figure}
 
-Another decision has been made to use Docker images running the exact same environment as the team had on their server, that is Debian with Apache configured to serve both minimized Javascript front-end app and handle API calls to backend PHP app. This was used during development so that all developers on the team, despite working on different operating systems would have the exact same server environment with the same dependencies and versions of each component. Another, very similar Docker image was used for Continuous Deployment, run against each Pull Request to ensure that application didn't break in some unexpected way.
+Another decision has been made to use lightweight virtualization for development environment - the team used Docker containers to achieve same environment as on their server, that is Debian with Apache configured to serve both minimized Javascript front-end app and handle API calls to backend PHP app. This way, despite working on different operating systems  the whole team would have the exact same server environment with the same dependencies and versions of each library and tool. Another, very similar Docker image was used for Continuous Deployment, that is after each Pull Request tests were launched inside Docker image using Shippable DevOps platform, in order to ensure that application didn't break in some unexpected way.
 
-For easy collaboration, the team initially used Asana, later Trello to manage amount of work in progress (WIP) via Kanban board. For git, private GitHub repository was used and all the tools were integrated with Slack, used for instant messaging. 
+For easy collaboration, the team initially used Asana, but after a month switched to Trello to manage amount of work in progress (WIP) via Kanban board. For Git, private GitHub repository was used and all the tools were integrated with instant messaging tool - Slack.
 
 \subsubsection{Next months - focus on implementation}
 Having made market research to gain confidence in initial direction and having made technological decisions and developer environment all set up, in late July the team decided to focus all efforts on implementation in order to have MVP ready for October.
-
-\paragraph{Mockups and GUI vision}
-A very important aspect of the project was Graphical User Interface, because one of main problems it was solving was manual and repetitious actions needed to be performed by receptionist - the team was aiming to make them easy and convenient. From the beginning it was clear that interface would evolve around some view of calendar. At first the team discussed the GUI using low-fidelity sketch on paper, and then, for implementation reference, as well as for GUI validation with the client, high-fidelity GUI prototype was prepared using Balsamic program. Figures \ref{fig:gui-sketch}, \ref{fig:gui-balsamic} and \ref{fig:gui-angular} present the same view evolution from low-fidelity sketch to actual application.
 
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{gui-sketch}
@@ -318,19 +315,71 @@ A very important aspect of the project was Graphical User Interface, because one
     \label{fig:gui-angular}
 \end{figure}
 
+\paragraph{Mockups and GUI vision}
+A very important aspect of the project was Graphical User Interface (GUI), because one of main problems it was solving was manual and repetitious actions needed to be performed by dance school receptionist - the team was aiming to make them easy and convenient. From the beginning it was clear that interface would evolve around some view of calendar. At first the team discussed the GUI using low-fidelity sketch on paper, and then, for implementation reference, as well as for GUI validation with the client, high-fidelity GUI prototype was prepared using Balsamic program. Figures \ref{fig:gui-sketch}, \ref{fig:gui-balsamic} and \ref{fig:gui-angular} present the same view evolution from low-fidelity sketch to actual application.
+
 \paragraph{Meeting with client and design validation}
+On 12th of August the team representatives met with client to verify created design. The client was shown interactive prototype achieved using Balsamic Links, that is buttons on static wireframes linked to another static wireframes, producing the illusion of full interactivity. The client enjoyed the prototype and was satisfied with the simplicity of design. He then proposed various additional features to be added in later phase of the project - different client types and award system (features from loyalty program software he was acquainted with), integration with his school's website, attendance visualization and checking attendance via QR-codes or special electronic card. After discussion we agreed that after MVP is done those features would be definitely revisited.
 
+% \FloatBarrier
+\paragraph{Collaboration model}
+The team decided that all 6 developers on the team would be working ``full-stack'', that is both on back-end and front-end side of the app in order for each developer to have sufficient autonomy to quickly implement full business features. As mentioned earlier, only one developer was previously acquainted (and in his case, proficient) with used technologies. The team accepted initial slow-down for everyone to catch-up with technologies (whose main choosing criteria was ease of learning) and predicted to gain traction after few weeks.
 
-\paragraph{Collaboration model?}
-How we worked together, what worked and what didn't. Mostly what didn't.
+As most of the team worked only part-time on the project and the team naturally did not have dedicated workplace for their needs at that point, 4 team members agreed to work daily in the morning at agreed time before work - 7:00 a.m., while two others preferred little later time. The goal was to minimize feedback-loop between team members, so each question / interaction / review wouldn't have to wait a few days for response, unnecessarily prolonging each task completion. Moreover, the team decided to meet every month to discuss progress, areas to improve and general direction and strategy.
+
+\paragraph{August - implementation progress}
+In August first features started to appear:
+\begin{itemize}
+\item Login page
+\item Initial, basic version of landing page to promote product
+\item Basic manager (admin) and receptionist views
+\item Adding new attendees
+\end{itemize}
+Furthermore, database schema was created and online payment intermediaries research was performed in order to include ability to pay for courses online.
+
+By this time it became clear that working remotely proved to be a bigger challenge than the team expected - only 2 members worked regularly each morning as was agreed on and 2 members didn't make progress on any task.
+
+\paragraph{September - implementation progress}
+Features implemented in September:
+\begin{itemize}
+\item Login authentication
+\item Attendees list
+\item Adding dance instructors and instructors list view
+\item Calendar component presenting courses
+\end{itemize}
+It's worth noting that all of mentioned tasks had very broad definition of done - each task included front-end and back-end validation, handling different sizes of display (via Bootstrap framework responsive capabilities), and even elegant back-end internationalization, which resulted in very long implementation and review periods - some tasks were implemented few weeks and then reviewed few additional weeks.
+
+It started to become clear, that MVP by October is out of the question - the team decided to focus less on polishing the product and instead create more granular tasks, so new features could be added more quickly. Another enthusiastically received idea was to create ``hackatons'', that is long whole-team programming sessions, where 1 technology experienced developer would coach others during their work.
+
+\paragraph{October - implementation progress}
+October progress:
+\begin{itemize}
+\item Dance course creation
+\item Attendee details / profile view
+\item Authorization improvement - automatic token refreshing so user is not logged out during application usage
+\end{itemize}
+
+Despite discussion on too long task implementation period in previous month, in October the problem became even worse due to even less regular working schedule and it was hard to schedule ``hackatons''. Consequently, motivation was plummeting and team members were clearly not spending promised amount of work on project. Intervention was needed, and so to improve work consistency and motivation, the team decided to log worked hours and change ad-hoc ``Stand-ups'' (officially called ``Daily Scrum Meetings'' held to summarize work progress and discussion of eventual impediments) to obligatory weekly ``Stand-ups'' where each team member would present their weekly work log.
+
+\paragraph{November - implementation progress}
+\begin{itemize}
+\item Multi-tenancy - application could now handle multiple dance schools 
+\item Added payments - receptionist can insert attendee payment with one of several available methods
+\item Application-wide notifications
+\item Email sending to attendees
+\item Visual indication of attendee payment status
+\item Dance course editing and handling multiple course times
+\end{itemize}
+As features implemented in November might indicate progress, but in fact most of them was just a finished result of implementation effort during October.
 
 \paragraph{Meeting with subject matter expert}
 
-\subsubsection{Pivoting idea - ZnajdźTaniec.pl}
-
 \subsubsection{Decision to end the project}
-Project ended 01.12.2016 with project summary meeting.
+Project ended 01.12.2016 with project summary meeting. Mention github link and licence.
 
+\subsubsection{Pivoting idea - ZnajdzTaniec.pl}
+
+\newpage
 \section{DNCR project evaluation}
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{dncr-funeral}
