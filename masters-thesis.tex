@@ -4,6 +4,7 @@
 \graphicspath{ {images/} }
 \usepackage[section]{placeins}
 \usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
 
 \newcommand{\sectionbreak}{\clearpage}
 \titleformat{\paragraph}
@@ -311,7 +312,7 @@ Having made market research to gain confidence in initial direction and having m
 \end{figure}
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{gui-placeholder}
-    \caption{Actual application in Angular, same view as in Figures \ref{fig:gui-sketch} and \ref{fig:gui-balsamic}}
+    \caption{Actual application in Angular, same view as in Figures \ref{fig:gui-sketch} and \ref{fig:gui-balsamic}. TODO insert actual screenshot later}
     \label{fig:gui-angular}
 \end{figure}
 
@@ -370,14 +371,26 @@ Despite discussion on too long task implementation period in previous month, in 
 \item Visual indication of attendee payment status
 \item Dance course editing and handling multiple course times
 \end{itemize}
-As features implemented in November might indicate progress, but in fact most of them was just a finished result of implementation effort during October.
+As features implemented in November might indicate progress, but in fact most of them was just a result of implementation effort during October. In November feature-creation cycle was even longer and work-logging and weekly ``Stand-ups'' were of little help, as most members spent less and less time on a project.
 
 \paragraph{Meeting with subject matter expert}
+On 12th of November the team representative met with subject matter expert - an acquainted senior ballroom dancer who organizes dance tournaments and who is knowledgeable about targeted market and has collaborated with various dance schools. 
+
+First part of the meeting consisted of loosely designed usability test - the expert saw the application for the first time and knowing what the application does, he was supposed to discover application capabilities by himself, without any guidance. His interaction was observed and all remarks and troubles were noted.
+
+As a result, 18 improvements were proposed and discussed, ranging from major usability flaws like inability to add existing attendee to another dance class (GUI for adding attendee to course only allowed for creating new ones) to various features the team hasn't yet considered, but are part of schools business procedure - how to handle ``waiting lists'' when dance class reaches participants limit or someone waits for the course to start in the future? Is somebody enrolled to course only when one pays, or just when one expresses interest and gives his data? How to handle bonus visits and coupons for clients for several entries for any course? How to handle courses designed for ``pairs'' only? And many other similar aspects not previously considered.
+
+During the second part of the meeting business model was discussed, in particular online payments viability for dance schools and due to various legal reasons (i.e. concerning fiscal evidence) this feature was decided to be postponed and substituted with plain email with reminder about due (or incoming) payments and dance schools bank account - as a easier way to validate the idea with less legal consequences.
+
+% \subsubsection{Pivoting idea - ZnajdzTaniec.pl} % shouldn't discussion about mvp - features instead of hypothesis validation come later?
+% As it was becoming increasingly clear that building what the team considered to be an MVP proved to be a long and tedious task, the worst thing seemed to be that instead of validating the idea for the business model, the team was constantly preoccupied with features. That is, after few months of development the team wasn't any more knowledgeable about whether their product would fit the market.
+
+% Sure, the team could reach out to some more schools and show them Balsamic interactive prototype to get initial reaction and... \textbf{TODO move this section to somewhere in project evaluation and expand on this idea.}
 
 \subsubsection{Decision to end the project}
-Project ended 01.12.2016 with project summary meeting. Mention github link and licence.
+After consultation with each team member about their individual reasons for constantly decreasing commitment, finally, during a meeting on 1st of December the decision has been made to end the project. The team decided to open-source the code on GitHub (\url{https://github.com/tlegutko/dncr}), the client would be proposed to evaluate competitive software and the team did ``Project Retrospective'' to discuss what went well and what were the lessons learned.
 
-\subsubsection{Pivoting idea - ZnajdzTaniec.pl}
+The team's December discussion is presented in the next chapter as the beginning of project evaluation.
 
 \newpage
 \section{DNCR project evaluation}
