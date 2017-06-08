@@ -35,7 +35,7 @@ Approaches gathered under the domain of Human-Computer Interface, particularly U
 
 One important area, where those practices cannot be easily applied is in startups, that is newly found software companies with little to none operating history, operating with lack of resources under extreme time pressure to quickly create product and find appropriate market for it. To answer needs for specific approach, Eric Ries proposed Lean Startup approach.
 
-But as Agile could benefit from User Centered Design practices, so could Lean Startup, and the scientific effort in this area resulted in Lean UX approach. But the research on this topic is scarce and in an attempt fill the gap author decided to perform case study of his own startup in the light of Lean UX advises in order to present lessons learned and provide guidelines for industry practitioners.
+But as Agile could benefit from User Centered Design practices, so could Lean Startup, and the scientific effort in this area resulted in Lean UX approach. But the research on this topic is scarce and in an attempt fill the gap author decided to perform case study of his own startup in the light of Lean UX advices in order to present lessons learned and provide guidelines for industry practitioners.
 
 \section{Introduction}
 \subsection{Brief history of software development process}
@@ -120,7 +120,7 @@ During recent years of ``agile methods reigns'' there came natural realization t
 
 As agile practices are now mainstream and have been there for a while, they are now very well defined and are huge areas and so research related to them has diverged into many branches. Traditionally there are surveys and mapping studies, which try to quantitatively measure the trends and answer questions such as what particular practices are used the most in the industry (time boxing, planning meeting, daily discussions) and what domains are they mostly used in \cite{diebold2014agile}. However, most research activity seems to be at the intersection of agile practices with various domains, most often domains representing more ``traditional'' approaches.
 
-As an example Chen Yang \cite{yang2016systematic} studied how to combine Software Architecture, that is practices related to high level system design with careful assessment of trade-offs, which was initially critiqued for ``Big Design Up-Front'' leading to excessive documentation and implementation of unneeded features. But the question remained - ``how much design is enough for different classes of problems'' and architecture design in early iterations, architecture freeze in later stages and iterative delivery documentation were some of most representative advises found.
+As an example Chen Yang \cite{yang2016systematic} studied how to combine Software Architecture, that is practices related to high level system design with careful assessment of trade-offs, which was initially critiqued for ``Big Design Up-Front'' leading to excessive documentation and implementation of unneeded features. But the question remained - ``how much design is enough for different classes of problems'' and architecture design in early iterations, architecture freeze in later stages and iterative delivery documentation were some of most representative advices found.
 
 Another example is a study about integrating Requirements Engineering. Research about software projects failure rate and factors suggests that among mostly reported causes is too much time spent on rework and creating the product out of sync with business due to poor requirements engineering. \cite{arcidiacono2017comparative}. Requirements Engineering provides in-depth description of practices related to requirements elicitation (interviews, focus groups), analysis (prioritization and modeling), documentation and validation (often with prototyping). Agile Requirements Engineering (RE) differs from traditional RE mostly because of iterativeness - instead of specifying complete specification at the beginning, which most often would be infeasible, requirements are specified iteratively and very often reprioritized (Scrum recommends practice addressing it called ``Backlog Grooming'' every Sprint\cite{rubin2012essential}). The often found challenge in Agile RE lies in neglecting nonfunctional requirements, because customers are for the most part not preoccupied with technical intricacies developers must face. Often reported causes of problems were ignoring critical aspects like scalability and performance at early stages, which inhibited growth later on. Overall, once claimed as heavyweight, Requirements Engineering have found their place in agile-dominant industry. Researchers emphasize the importance of ``intensive communication between the developers and customers as the most important RE practice''. \cite{paetsch2003requirements} \cite{cao2008agile} 
 
@@ -220,6 +220,7 @@ Liikkanen, Kilpiö, Svan and Hiltunen provided experience report of trying to ap
 Research in this area is still very scarce, in fact, above-mentioned sources, that is two theory-creating books, manifesto and one brief case study are the total sum of materials on this topic the author could find. There is a clear need for more materials on this matter.
 
 \section{Problem formulation and methodology}
+\label{sec:probl-form-meth}
 Looking from both historical point of view and at current trends, it's clear that Agile and User Centered Design can benefit from incorporating each other practices. This area has been thoroughly researched and there are guidelines and patterns to follow.
 
 Despite recent phenomenon of successful startups, they receive surprisingly little attention from researchers and through unique operating conditions, they are in need for specific methodological approach. Lean Startup addresses many of the challenges startups face, but as in case of agile methods, it could benefit greatly from applying User Centered Design related activities.
@@ -279,11 +280,11 @@ Drawing upon proposed categories and including Lean UX specific questions, the f
 \begin{RQ}
     \item How can Lean Startup practices improve startup results and what are the impediments in adopting them?
     \item What Lean UX practices are most important in beginning phases of startup?
-    \item What are most essential advises for startups regarding product?
-    \item What are most essential advises for startups regarding team?
-    \item What are most essential advises for startups regarding technology?
-    \item What are most essential advises for startups regarding business/market?
-    \item What are most essential advises for startups regarding team?
+    \item What are most essential advices for startups regarding product?
+    \item What are most essential advices for startups regarding team?
+    \item What are most essential advices for startups regarding technology?
+    \item What are most essential advices for startups regarding business/market?
+    \item What are most essential advices for startups regarding team?
 \end{RQ}
 
 \section{DNCR project}
@@ -429,31 +430,139 @@ During the second part of the meeting business model was discussed, in particula
 \subsection{Decision to end the project}
 After consultation with each team member about their individual reasons for constantly decreasing commitment, finally, during a meeting on 1st of December the decision has been made to end the project. The team decided to open-source the code on GitHub (\url{https://github.com/tlegutko/dncr}), the client would be proposed to evaluate competitive software and the team did ``Project Retrospective'' to discuss what went well and what were the lessons learned.
 
-The team's December discussion is presented in the next chapter as the beginning of project evaluation.
+The team's December discussion is presented in Section \ref{sec:dncr-proj-eval} as the beginning of project evaluation.
 
-\newpage
 \section{DNCR project evaluation}
+\label{sec:dncr-proj-eval}
+This section starts with project evaluation performed by the whole team on the day when project ended and continues with answers to research questions specified at the end of Section \ref{sec:probl-form-meth}.
+
+\subsection{DNCR retrospective meeting}
+The whole team met 1st of December and made the decision to end the project. Then the team proceeded to ``project retrospective'' in order to discuss strengths and weaknesses of the project.
+
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{dncr-funeral}
-    \caption{DNCR project summary made collaboratively by the whole team during the meeting when the decision has been made to discontinue the project}
+    \caption{DNCR project summary made collaboratively by whole team during the meeting when the decision has been made to discontinue the project}
     \label{fig:dncr-funeral}
 \end{figure}
 \FloatBarrier
 
+\subsubsection{What went well}
+
+Among the positive aspects of the project the team listed:
 \begin{itemize}
-  \item From the very beginning the progress was too slow, it was caused mainly by the team's inexperience with web technologies 
-  \item Almost whole project was spent on creating MVP, the team didn't reach Lean tartup's Build-Measure-Learn cycle
-  \item Inappropriate architectural decisions - PHP as backend stack instead of Java, beta Angular 2, focusing on too much polished solution (handling multiple device sizes) when team didn't have experience and it was slowing us down
-  \item Lack of leadership
-  \item Lack of same-place collaboration, remote working didn't work out with inexperienced team
-  \item No consequences for mediocre performance - underperformers dragged the whole team's morale down
-  \item Too much focus on future needs, to little focus on simplest solutions
-  \item Need to balance learning and growth effective implementation and functionality growth
-  \item Learning Lean Startup methodology during our project meant we still didn't really understand it and we truly learned it on our own mistakes
-  \item We were not the only team with such problems \cite{may2012applying}, unfortunately we didn't have that knowledge during our project
-  \item Lack of experience in many startup-related areas leads to great learning, but also, unsurprisingly, lack of good results
-  \item Minimal Viable Product is a great idea our team didn't really understand. Building MVP for 5 months means not building it correctly
+\item Technology stack - although many team members didn't manage to become productive in it, it was drastically different experience from what most of them used daily at work and allowed them to learn a lot
+\item Experience of first startup, as it often takes several failed attempts before successful one
+\item Learning about many legal and financial aspects, how much it costs to sustain private firm, how much it costs to start limited liability company and what are the best options when using online payments intermediaries
+\item Swift, albeit slightly too late decision to end the project when it became clear it wouldn't lead anywhere. Also the fact that project was rather well defined and had client from the start, so the initial goal was clear.
+\item The team enjoyed collaborating together and working on project outside paid work allowed them to learn a lot about aspects of team motivation. The team appreciated various methods that were attempted to make collaboration work (retrospectives, idea for guided hackatons, work logging and others)
+\item Open-sourcing the project, which leaves public trace of performed work, which can be very useful, i.e. can be added to CVs.
 \end{itemize}
+
+\subsubsection{What made the team fail}
+The team found the following reasons for project failure:
+\begin{itemize}
+\item The main, most important reason was that most team members didn't treat the project as their ``main thing'' they needed to focus on. On one hand it's hard to expect several people to suddenly resign from their work and spend all their efforts on project that might or might not succeed and might or might not return the invested time and money, on the other hand if something is not given appropriate priority, then naturally regular work and other aspects will at times consume most of attention and commitment to side project will plummet. And with very little time spent on project, there are very few mistakes to make in order to still have chance for success.
+\item Overwhelming technologies and ``one expert surrounded by interns'' situation. It's natural to learn new languages, frameworks and tools in software development, but launching into two completely unfamiliar technology stacks, especially if one of them is front-end development, which in last years became quite daunting for newcomers. Another aspect of technological shortcomings was usage of Docker in development environment, which in theory works on all platforms, but in practice broke constantly with new versions for team-members working on Windows. Overall, as was listed during the meeting, ``lack of in-depth technology understanding'' naturally resulting from lack of experience with technology slowed most of team-members down tremendously.
+\item Next critical aspect was about the way the team organized work and responsibility among team members. On the project kick-off meeting the team decided that despite different skill-sets (1 experienced developer) and different amount of spent time (1 developer worked on DNCR full-time), work of every member would be treated equally in light of future financial gains. On top of that, there was no clear leader elected and so instead of enthusiastic, collaborative atmosphere, team members demonstrated sociological phenomenon called diffusion of responsibility.
+\item Diffusion of responsibility was amplified by lack of consequences towards underperformers. Out of 7 initial members, one resigned early and two other practically didn't contribute anything during the course of whole undertaking. One other was active mostly in first phase and as a result only 3 people worked for declared amount of time, and seeing lack of engagement from others only lowered morale and enthusiasm of active members. 
+\item Another aspect of low commitment among team members was lack of intrinsic motivation. Only one member knew the client directly and felt close to the domain and emotionally invested to make the project succeed, others had more cold, business oriented attitude. And as there was also no team leader, those members felt they weren't held accountable for keeping constant commitment.
+\item Many team members confessed to be discouraged over time by initial idea for business model, claiming that number of dance schools on the market is not enough to financially return the investment any time soon and that bringing application to another domains or creating platform for dance class attendees was too far in the future.
+\item Another set of drawbacks was that many ideas to improve team workflow didn't work out - guided hackatons didn't take place after all, work log was introduced too late and meetings were mostly about business and discussion, not about coding sessions. Lack of regular work in one place was in itself mentioned as important aspect - it made it harder for underperformers to gain traction and it made collaboration, especially code reviews, much more time consuming.
+\end{itemize}
+
+\subsection{Study results}
+\label{sec:research-questions}
+Few months later, writing this thesis, the author has acquainted himself with work of many authors on related topics in order to understand more deeply not only why did the project fail, but what could have been done differently. What other approaches could facilitate collaboration and improve chances of success of future projects and what advices could be directed towards other startups. And so, with benefit of hindsight, the following is author's answer to research questions.
+
+
+\subsubsection{RQ1: What Lean UX practices are most important in beginning phases of startup?}
+Early stages of startup activities revolve mainly around validating problem, market and the product \cite{klein2013ux}. DNCR team did quite well in that regard, performing both qualitative and qualitative market research and doing competitive product audits. On top of that, design of product was validated with client using interactive prototype. All those activities gave the team necessary confidence in initial direction of action.
+
+Of course there was room for improvement - hypothesis that customers would want to search for dance courses and pay for their classes online was critical for product future, yet instead of performing semi-statistically significant (40 respondents) online survey, it would be better to follow Steve Blank \cite{blank2013four} advice of Getting Out Of the Building (GOOB) and just go to some dance courses and perform survey in person, so follow-up questions could be asked, which would be a much better way to validate the idea.
+
+Furthermore, more dance schools should be collaborated with from initial phases of the project, so solution the team would arrive to would be more universal and not just a perfect fit for first client. The team was well aware of that, but planned to acquire new clients after initial MVP version, which unfortunately didn't work well as the team failed to finish MVP.
+
+The general advice for startups is then to:
+\begin{itemize}
+\item Actually perform various types of research and design validation before starting implementation, as it allows to clearly set initial direction
+\item Especially in the beginning, focus on in-person, qualitative surveys. Quantitative research has it's many uses, but as Laura Klein \cite{klein2013ux} notes, online surveys cannot be considered as being in touch with users.
+\item Competitive products audits cannot be recommended enough. They let the team learn from mistakes of others and in case of EU markets, often very similar solution already exists abroad (especially in US) an can serve as great source of inspiration.
+\end{itemize}
+
+\subsubsection{RQ2: How can Lean UX practices influence Minimal Viable Product building and what are impediments in adopting them?}
+As for implementation, Lean UX, following Lean Startup, advices treating each feature as a hypothesis to be tested and considered done only once proved to improve business metrics, usually via quantitative A/B testing. This can be hard at early implementation stages, when there is neither infrastructure nor user base for such tests yet, so in order to start iterative build-measure-learn loop, the team has to swiftly create Minimal Viable Product. It's important to note that Lean UX doesn't really discuss or define practices for MVP building, it generally embraces Agile and assumes the engineers will do the right thing. Laura Klein \cite{klein2013ux} discusses how hard is it to choose just the most necessary features at the beginning.
+
+And this is where DNCR team failed hard. Initial design vision and ``minimal feature-set'' was ridiculously misaligned with team skill-set and it was noticed very late in the process. As a result, after more than 4 months focused solely on implementation in team of 6 developers, the MVP still wasn't officially finished. Eric Ries \cite{ries2011lean} addresses this in his case study of actions by David Binetti, the CEO of Votizen, platform for civic participation in political process:
+\begin{quote}
+Votizen story exhibits some common patterns. One of the most important to note is the acceleration of MVPs. The first MVP took eight months, the next four months, then three, then one. Each time David was able to validate or refute his hypothesis faster than before. 
+\end{quote}
+Ries then argues that it's not due to Binetti previous product development work, as it often was discarded across different MVPs. It was partly due to existing testing infrastructure, but it was mostly due to ``hard-won lessons David had learned through each milestone''.
+
+So it's not only the DNCR team that misunderstood the minimalism intended by MVP. In particular, the team needlessly focused on correct design scaling based on resolution - mobile first approach is a great guideline, but it just wasn't needed at this point in time. Moreover, team members were too strict in code review process - good code is important, but when reviews take long weeks and slows feature development, then it's a waste of effort. When learning new technology it's okay to have less quality code and improve later. It's infinitely better to have validated product ridden with technological debt than to have quality code that didn't reach the market or even validation phase. Ideally, it's great to have both, but sometimes the choice has to be made.
+
+Thus, general advice for startups regarding MVP is to:
+\begin{itemize}
+\item Consider team skill-set and other performance risks when determining feature-set of an MVP. It's main role is to quickly enable build-measure-learn loop and until it starts, the team doesn't really learn anything about their product.
+\item Prioritize, prioritize, prioritize, as sometimes too much emphasis on good development practices are a waste of effort. Laura Klein \cite{klein2013ux} even proposes to put off visual design at first, as it is both faster to iterate and it doesn't influence interaction testing.
+\item Consider MVP to be more of a prototype than a product. MVP has to be viable, but the minimal part is really important - if developers don't feel shame about lack of features of released version, or worse, haven't released any version few months into development, then this is not MVP.
+\end{itemize}
+
+\subsubsection{RQ3: What are most essential advices for startups regarding technology?}
+This question is very hard to answer other than ``it depends'', as every startup faces different technological challenges.
+
+Firstly, it's important to really understand consequences of technological choices. In DNCR project, choosing backend technology language Ruby was considered and eventually PHP was chosen despite the fact that most of the team had extensive experience in Java. Of course it's true that Java servers cost more and of course it's tedious to always use the same language and technology, but startups really provide enough novelty outside of technology and cost of leaving familiar technology stack for new one is really not to be underestimated. As almost all members were also new to front-end development, so instead of being productive at least in server-side aspects from day one, many members failed to become productive at all during the project.
+
+Secondly, in principle it's great to have whole development team consisting of only full-stacks, it doesn't unnecessarily split the team and every member has autonomy to implement full business features on their own. In practice, it resulted in low granularity tasks that took weeks to implement and additional weeks to review.
+
+Moreover, Docker as a tool of abstracting over developer environment is great in theory, but in practice it made three Windows 10 developers lives in the team miserable, crashing constantly in hard to debug ways. Two of them switched to Linux Virtual Machines and one suffered with broken environment after each update to the end of project. Additionally, development environment facilitating Docker prevented the team from being able to use Angular HMR (Hot Module Reloading), which would make development feedback loop even tighter.
+
+Another aspect was decision to use Release Candidate version of Google's Angular, before it's 2.0 release. In theory release candidates, made after alpha and beta, should be stable, but was not the case, Angular upgrades around RC5 were painful, as Google team introduced significant breaking changes and updated their documentation which wasn't versioned before 2.0 and DNCR team couldn't upgrade because of dependencies on earlier Angular RC versions. And for some time the team was out of sync with documentation.
+
+Yet another aspect was implementing token authorization and in general user login handling. The team evaluated using COTS (Commercial Off-The-Shelf) solution, offering Social Sign-In for free until certain user limit, but eventually the team decided to manually implement solution using JWT (JSON Web Tokens). Again, in this case it might've been a better choice to just use COTS solution and worry later once product is validated and number of users approaches that limit.
+
+The team, of course, did some things well too - one of them was to start implementation phase from extensive documentation about development environment setup, integration with IDE and configuration of Continuous Integration and so that important aspect went smoothly (this setup documentation is available at \url{https://github.com/tlegutko/dncr}). Usage of Docker was the only part that didn't go well.
+
+Overall, general advice for startups regarding technology is to:
+\begin{itemize}
+\item Think twice before relying on Docker when using Windows
+\item Above all, think ten times before choosing novelty of unfamiliar technologies and seriously consider its impact on team's productivity
+\item Full-stack development team is nice, but consider that an end-goal, not a requirement from day one. It's okay to specialize in the beginning. And keep high enough granularity of tasks.
+\end{itemize}
+
+\subsubsection{RQ4: What are most essential advices for startups regarding team?}
+As mentioned during project retrospective, the team suffered from diffusion of responsibility due to underperformers and lack of leadership.
+
+Regarding leadership, the team had three candidates: leader of team at work where most developers collaborated prior to project, developer who brought the idea along with the client and organized team's work and the only developer experienced with technologies, who was also responsible for design. The first one wasn't very committed from the start, while the second and the third thought the other one was more fitting. The end scenario was worst possible, as no one was selected and it negatively affected perceived responsibility of team members.
+
+Lack of formal definition of startup \cite{paternoster2014software} was another reason for lack of leadership and even distribution of costs - one of leader candidates perceived a startup as a collaborative, passionate effort where there is no need for formal structure and everyone gives their all. As Giardino et. al. \cite{giardino2014early} notice:
+\begin{quote}
+  One of the key determinants of success in startup companies is the passionate behavior of the founders. People who lack passion often use the first barrier they encounter as an excuse for failure. People who have high passion will do whatever it takes to overcome those barriers.
+\end{quote}
+
+This assumption was part of the reason that underperformers' behavior was accepted for so long. Initially no formal structures were assumed to be necessary, as team was doing well on initial motivation from starting the project. Furthermore, initial lack of productivity was expected due to lack of experience with technology. What was noticed much too late was that lack of productiveness was not due to hardships in mastering technology, it was due to not spending time on the project. Work logging and simple performance evaluation like weekly summary should have been introduced and acted on earlier.
+
+Moreover, the team lacked regular face-to-face collaboration, especially during implementation. Even though it's one of main principles listed in Agile Manifesto, the team failed to incorporate it. Of course it's hard to coordinate 6 people, mainly working after regular work hours, of course it's more convenient and flexible for developers to work remotely when it fits them most. But the truth is, if the team is inexperienced with technology, there is a high chance that this will not work. Firstly, every technological question and problem can either take longer when developer solves it himself or can be solved instantly with help of someone more experienced. The former is of course necessary for effective, long term learning, but lack of balance between the too is of a huge impact for productivity. Secondly, all discussions, especially over code review, take much longer. And unproductive loneliness takes high toll on motivation.
+
+
+Advice for startups regarding social/people/team aspect is to:
+\begin{itemize}
+\item Explicitly choose leaders. Choosing technological leader and team leader is a good choice in situation similar to DNCR project. Choosing another configuration is also good, as long as roles are clearly defined.
+\item Although both methodological and technological advancements made startups much less risky, they still require passionate founders who will persevere and overcame all eventual roadblocks.
+\item Underperformers should be moved away from team quickly. It may seem counter-intuitive, as extra developer seems to always push work a little bit forward, but when his contribution is minimal, slows the team down and negatively affects morale, it's the right thing to let them go.
+\item Seriously consider the impact of abandoning regular collaborative implementation sessions and unless the team has experience working remotely in particular technology, think hard about counter-measures to save team's productivity.
+\end{itemize}
+
+\subsubsection{RQ5: What are most essential advices for startups regarding business/market?}ź
+Advice for startups regarding business/market is to:
+\begin{itemize}
+\item Read Eric Ries' book ``The Lean Startup'' \cite{ries2011lean}, it's more than excellent advice on this matter.
+\end{itemize}
+
+\subsubsection{RQ7: What are most essential advices for startups regarding stuff from success factors?}
+i
+
+\subsubsection{DNCR team was not the only one with those problems}
+(Why early startups fail, Applying Lean Startup: Experience Report
 
 \section{Conclusion}
 \subsection{Future work}
