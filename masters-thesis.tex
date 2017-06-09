@@ -13,13 +13,10 @@
 \titlespacing*{\paragraph}
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
-\newlist{RQ}{enumerate}{1}
-\setlist[RQ]{label=RQ\arabic*:}
-
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
 
-\title{A study on user-centered design illustrated by development of social platform for dance classes attendees}
+\title{A study on Lean UX methodology application in early-stage startup illustrated by development of software for dance schools management}
 \author{Tomasz Legutko}
 \date{2016/2017}
 \begin{document}
@@ -35,7 +32,7 @@ Approaches gathered under the domain of Human-Computer Interface, particularly U
 
 One important area, where those practices cannot be easily applied is in startups, that is newly found software companies with little to none operating history, operating with lack of resources under extreme time pressure to quickly create product and find appropriate market for it. To answer needs for specific approach, Eric Ries proposed Lean Startup approach.
 
-But as Agile could benefit from User Centered Design practices, so could Lean Startup, and the scientific effort in this area resulted in Lean UX approach. But the research on this topic is scarce and in an attempt fill the gap author decided to perform case study of his own startup in the light of Lean UX advices in order to present lessons learned and provide guidelines for industry practitioners.
+But as Agile could benefit from User Centered Design practices, so could Lean Startup, and the scientific effort in this area resulted in Lean UX approach. But the research on this topic is scarce and in an attempt fill the gap author decided to perform case study of his own startup in the light of Lean UX advices in order to present lessons learned and to provide guidelines for industry practitioners.
 
 \section{Introduction}
 \subsection{Brief history of software development process}
@@ -277,15 +274,14 @@ In ``A survey study of critical success factors in agile software project'' Chow
 
 Drawing upon proposed categories and including Lean UX specific questions, the following research questions about early-stage startup activities are going to be answered:
 
-\begin{RQ}
-    \item How can Lean Startup practices improve startup results and what are the impediments in adopting them?
-    \item What Lean UX practices are most important in beginning phases of startup?
-    \item What are most essential advices for startups regarding product?
-    \item What are most essential advices for startups regarding team?
-    \item What are most essential advices for startups regarding technology?
-    \item What are most essential advices for startups regarding business/market?
-    \item What are most essential advices for startups regarding team?
-\end{RQ}
+\begin{itemize}
+\item[RQ1:] What Lean UX practices are most important in beginning phases of startup?
+\item[RQ2:] How can Lean UX practices influence Minimal Viable Product building and what are impediments in adopting them?
+\item[RQ3:] What are most essential advices for startups regarding technology?
+\item[RQ4:] What are most essential advices for startups regarding team?
+\item[RQ5:] What are most essential advices for startups regarding business/market?
+\item[RQ6:] What are most essential advices for startups regarding success factors in agile software projects identified by Chow and Cao \cite{cao2008agile}?
+\end{itemize}
 
 \section{DNCR project}
 \label{sec:dncr-project}
@@ -352,7 +348,7 @@ Having made market research to gain confidence in initial direction and having m
 \end{figure}
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{gui-placeholder}
-    \caption{Actual application in Angular, same view as in Figures \ref{fig:gui-sketch} and \ref{fig:gui-balsamic}. TODO insert actual screenshot later}
+    \caption{Actual application in Angular, same view as in Figures \ref{fig:gui-sketch} and \ref{fig:gui-balsamic}. TODO insert actual screenshot with calendar events looking similar to above figures}
     \label{fig:gui-angular}
 \end{figure}
 
@@ -421,11 +417,6 @@ First part of the meeting consisted of loosely designed usability test - the exp
 As a result, 18 improvements were proposed and discussed, ranging from major usability flaws like inability to add existing attendee to another dance class (GUI for adding attendee to course only allowed for creating new ones) to various features the team hasn't yet considered, but are part of schools business procedure - how to handle ``waiting lists'' when dance class reaches participants limit or someone waits for the course to start in the future? Is somebody enrolled to course only when one pays, or just when one expresses interest and gives his data? How to handle bonus visits and coupons for clients for several entries for any course? How to handle courses designed for ``pairs'' only? And many other similar aspects not previously considered.
 
 During the second part of the meeting business model was discussed, in particular online payments viability for dance schools and due to various legal reasons (i.e. concerning fiscal evidence) this feature was decided to be postponed and substituted with plain email with reminder about due (or incoming) payments and dance schools bank account - as a easier way to validate the idea with less legal consequences.
-
-% \subsubsection{Pivoting idea - ZnajdzTaniec.pl} % shouldn't discussion about mvp - features instead of hypothesis validation come later?
-% As it was becoming increasingly clear that building what the team considered to be an MVP proved to be a long and tedious task, the worst thing seemed to be that instead of validating the idea for the business model, the team was constantly preoccupied with features. That is, after few months of development the team wasn't any more knowledgeable about whether their product would fit the market.
-
-% Sure, the team could reach out to some more schools and show them Balsamic interactive prototype to get initial reaction and... \textbf{TODO move this section to somewhere in project evaluation and expand on this idea.}
 
 \subsection{Decision to end the project}
 After consultation with each team member about their individual reasons for constantly decreasing commitment, finally, during a meeting on 1st of December the decision has been made to end the project. The team decided to open-source the code on GitHub (\url{https://github.com/tlegutko/dncr}), the client would be proposed to evaluate competitive software and the team did ``Project Retrospective'' to discuss what went well and what were the lessons learned.
@@ -543,7 +534,6 @@ This assumption was part of the reason that underperformers' behavior was accept
 
 Moreover, the team lacked regular face-to-face collaboration, especially during implementation. Even though it's one of main principles listed in Agile Manifesto, the team failed to incorporate it. Of course it's hard to coordinate 6 people, mainly working after regular work hours, of course it's more convenient and flexible for developers to work remotely when it fits them most. But the truth is, if the team is inexperienced with technology, there is a high chance that this will not work. Firstly, every technological question and problem can either take longer when developer solves it himself or can be solved instantly with help of someone more experienced. The former is of course necessary for effective, long term learning, but lack of balance between the too is of a huge impact for productivity. Secondly, all discussions, especially over code review, take much longer. And unproductive loneliness takes high toll on motivation.
 
-
 Advice for startups regarding social/people/team aspect is to:
 \begin{itemize}
 \item Explicitly choose leaders. Choosing technological leader and team leader is a good choice in situation similar to DNCR project. Choosing another configuration is also good, as long as roles are clearly defined.
@@ -552,26 +542,80 @@ Advice for startups regarding social/people/team aspect is to:
 \item Seriously consider the impact of abandoning regular collaborative implementation sessions and unless the team has experience working remotely in particular technology, think hard about counter-measures to save team's productivity.
 \end{itemize}
 
-\subsubsection{RQ5: What are most essential advices for startups regarding business/market?}ź
+\subsubsection{RQ5: What are most essential advices for startups regarding business/market?}
+DNCR project was targeting dance schools, but in the next stages the plan was to also target customers and create two cooperating products, which would allow people to search and compare dance courses across different dance schools. This cooperation would bring various benefits, as data for customers would be always up-to-date as schools would use their products daily to manage their business procedures Moreover, customers searching for dance courses would create advertising opportunity for dance schools and let them target very selected group of potentially interested clients.
+
+In fact, in late stages of project, the team started to wonder if the development was started from the right product. That is, validating product for business is harder than validating product for customers, as there is naturally much less companies than clients those companies target. Moreover, in order to convince companies to consider spending significant sum of money on product, it has to offer some convincing initial feature-set. And as DNCR project was trying to achieve it, it spent several months implementing features, but not learning anything about their solution.
+
+There was idea to pivot into creating platform for clients, with idea for validating it presented briefly on Figure \ref{fig:znajdz-taniec}. It would be really easy to implement and Laura Klein \cite{klein2013ux} advices exactly those type of tests at the beginning of the project. This way, spending reasonable amount of money on Google AdWords and Facebook Ads, the team could easily get the idea about number of potentially interested customers and thus answer one of most important hypotheses.
+
+But the downside was that as project progressed really slowly, it seemed unwise to split attention to two products. It was tempting to abandon initial product for dance schools for the time being and shift attention to platform for clients, but having not yet validated product for dance schools, it would seem to be tremendous waste to drop it, maybe it was the right approach? The team didn't have any data to scientifically make the decision, it waited too long with measuring and learning loop.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{znajdz-taniec}
+    \caption{Idea for validating platform for clients with two-page prototype. On first screen Google-like search bar with question ``Do you want to dance?'' and once user performs search, results page with mocked data shows up. Below it appears window informing about site being a prototype in development and asking for email to be notified once site launches.}
+    \label{fig:znajdz-taniec} 
+\end{figure}
+
 Advice for startups regarding business/market is to:
 \begin{itemize}
-\item Read Eric Ries' book ``The Lean Startup'' \cite{ries2011lean}, it's more than excellent advice on this matter.
+\item Embrace the idea of smoke tests, where product is launched, pretending to ``not work yet'', with the sole intent on validating the idea before spending months on implementation.
+\item Producing MVP for businesses can be harder and more time consuming than creating MVP for clients.
+\item It's of utmost importance for a startup to find the quickest possible way to learn whether their product answers the market needs.
+\item Read Eric Ries' book ``The Lean Startup'' \cite{ries2011lean}, it's main focus is on this aspect and it features multiple case studies discussing variety of approaches.
 \end{itemize}
 
-\subsubsection{RQ7: What are most essential advices for startups regarding stuff from success factors?}
-i
+\subsubsection{RQ6: What are most essential advices for startups regarding success factors in agile software projects identified by Chow and Cao \cite{cao2008agile}?}
+Chow and Cao list 6 success factors, presented from most to least significant: delivery strategy, agile software engineering techniques, team capability, project management process, team environment and customer involvement. All of those factors are further divided into attributes representing desired activity, i.e. ``regular delivery of software'' or ``delivering most important features first''.
 
-\subsubsection{DNCR team was not the only one with those problems}
-(Why early startups fail, Applying Lean Startup: Experience Report
+DNCR project suffered from shortcomings in all of these aspects:
+\begin{itemize}
+\item The team was so focused on achieving feature-rich MVP that it neglected regular delivery and as a result did not learn during MVP implementation phase
+\item The team failed to choose simplest design and architectural solutions, coding standard emerged quite late in the process.
+\item Team capability left much to be desired, both technical and motivation-wise
+\item Ad-hoc project management with lack of leadership, lack of individual progress tracking and no consequences towards underperformers
+\item Team was not collocated and it negatively impacted team performance
+\item Relationship and customer commitment were pretty mediocre. After design validation, the next meeting was supposed to be with MVP, but as MVP was falling behind the schedule, there was no intervention from either of sides.
+\end{itemize}
+
+Advice for startups regarding success factors regarding success factors in agile software projects identified by Chow and Cao is to:
+\begin{itemize}
+\item Keep working on ``Agile and basics''. Adopting modern methodology such as Lean Startup or Lean UX is by no means an excuse to neglect many development practices that those methodologies just do not explicitly focus on.
+\end{itemize}
+
+\subsubsection{DNCR project was not the only one with those problems}
+As it is often the case, DNCR team was not alone in their struggles and resulting failure. This study results align well with results from other works.
+
+Giardino, Wang and Abrahamsson \cite{giardino2014early} performed case studies of two failed startups. Both of them released the product, but didn't attract customers. Similarly to DNCR project, those startups neglected learning during implementation phase and missed entrepreneurial characteristics in team members, leading to lack of motivation and decreasing commitment. Business-side, they were preoccupied with profitable business model instead of solving problem/solution fit and learning from customers. They were ``addressing specific challenges in the wrong time''. And same as DNCR team, instead of close collaboration with their clients, they were too absorbed in technology.
+
+Beverly May \cite{may2012applying}, describing her failed startup argues that single most important lesson was to learn to constantly test every assumption in order to keep progressing in the right direction. Among other reasons for failure she also notes not-thought-out technological choices, mainly about choosing bleeding-edge frameworks and failing to fire underperformers fast. Those exact factors sound very similar to problems in DNCR project.
+
+Among key qualities needed for startup survival, Beverly May listed extraordinary passion, perseverance ``and a lot of fast learning and smart decision-making''. In DNCR project there was definitely not enough of those, but it's a real shame that the team didn't have that knowledge about problems of other startups during their own struggle. This is why it's very important to keep filling the gap in literature about startups, so new teams can easily find help and guidance more easily.
+
+\subsubsection{Balancing learning and productivity}
+The team learned Lean Startup and Lean UX methodologies as they progressed with the project, which in practice meant that even though team members were aware of practices, they truly understood them after learning from their own mistakes.
+
+As for almost every member on the team DNCR was their first startup and lack of experience lead team members to great learning opportunity about various aspects of startup activity including legal, financial and marketing aspects, not to mention new technologies. But being a great learning opportunity, the difference between learning and performing has to bee noticed, as it's absolutely unrealistic to expect to achieve business goal on absolutely unfamiliar grounds where everything is a learning experience, especially with limited time and resources. Balance needs to be maintained between the two and it often may lead to tough development decisions of accepting technological debt and use whatever is familiar to maintain momentum.
+
+But in startups, with limited time and resources, there are only so many mistakes that can be made before project fails and it's paramount to be able to constantly focus on what's most important.
 
 \section{Conclusion}
+In this thesis, Lean UX practices in startups were studied from both theoretical and practical point of view.
+
+First, Lean UX was introduced with historical view at methodologies it originated from - Agile, User Centered Design and Lean Startup. Those methodologies were briefly introduced and state of the art was discussed with special emphasis on attempts to combine those methodologies. There is surprisingly little research on startups in general and hardly any research on Lean UX and filling the missing gap was main motivation for this thesis.
+
+Next chapters focused on case study of author's failed startup DNCR, active between 22.06.2016-01.12-2016. The goal was to analyze actions and decisions made by DNCR team in light of approach proposed in literature and to provide lessons learned. Answers to research questions resulted in 18 guidelines for startups.
+
+Most notable limitation of the study was that DNCR startup didn't reach the market and didn't even finish building MVP, thus many Lean UX practices for verified quantitative learning weren't performed and analysis focused on early-stage startup activities.
+
 \subsection{Future work}
-\begin{itemize}
-  \item Software startup is not only about software, it's also about legal aspects, acquiring funding, marketing - it's still not explored in literature
-  \item Still little synthesized experience report on startups (especially those failed)
-  \item Metrics on tracking progress in early phases of startup (MVP building), before having clients to perform usability tests / cohort analysis and so on.
-  \end{itemize}
-\newpage
+Above all, startups need more researchers' attention. In recent years there started to appear books targeted at entrepreneurs and that's a good thing, but there needs to be more systematic studies and especially experience reports and lessons learned, as they can provide guidance for many startups to come.
+
+Moreover, software startups are definitely not only about software, but also about legal aspects, acquiring funding, marketing and so on - it's still remains to be explored in literature.
+
+Furthermore, Lean Startup and Lean UX are not very verbose about engineering aspects and challenges of building either MVP or infrastructure allowing for A/B metrics. As those methodologies become more and more popular, hopefully those technological questions are to be answered.
+
 \listoffigures
 \bibliographystyle{plain}
 \bibliography{masters-thesis} 
