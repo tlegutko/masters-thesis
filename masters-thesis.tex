@@ -6,6 +6,7 @@
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{pdfpages}
+\usepackage[utf8]{inputenc}
 \usepackage{natbib}
 \bibliographystyle{abbrvnat}
 \setcitestyle{authoryear}
@@ -181,9 +182,9 @@ As the collaboration between the Agile and UX teams receives most attention in v
 There has even been created a framework dedicated to integrating usability engineers into an Agile team, called Extreme Scenario Based Design Approach (XSBD), with QXSBD (Quantified) variant, focusing explicitly on the usability-related metrics, but they have yet to receive broad attention \citep{jurca2014integrating}.
 
 \subsubsection{Startups}
-Despite the recent years' phenomenon of newly created software companies achieving huge success and wide public attention and recognition overnight, research on this topic is scarce. There is no commonly accepted definition of startups in literature and they are mostly described through the context of their activities, that is, extreme uncertainty (as in Eric Ries \textit{Lean Startup} \citep{ries2011lean} definition), little to no operating history, lack of resources, intensive time pressure, quick time to market and innovativeness. As a consequence, it is hardly surprising that startups are reported to lack a well-defined processes, but opportunistically select practices when needed, applying the same approach to requirements, documentation, architecture and metrics. Managerial practices are reduced to bare minimum and empowered developers adapt to several roles. \citep{paternoster2014software}
+Despite the recent years' phenomenon of newly created software companies achieving huge success and wide public attention and recognition overnight, research on this topic is scarce. There is no commonly accepted definition of startups in literature and they are mostly described through the context of their activities, that is, extreme uncertainty (as in \textit{The Lean Startup} \citep{ries2011lean} definition), little to no operating history, lack of resources, intensive time pressure, quick time to market and innovativeness. As a consequence, it is hardly surprising that startups are reported to lack a well-defined processes, but opportunistically select practices when needed, applying the same approach to requirements, documentation, architecture and metrics. Managerial practices are reduced to bare minimum and empowered developers adapt to several roles. \citep{paternoster2014software}
 
-One area of research related to startups focuses on reasons behind a very high startup failure rate. Giardiono, Wang and Abrahamsson \citep{giardino2014early} attempt to explain failure by performing multiple-case study, analyzing early-stage activities from market, product, team and business perspectives. The most common and costly mistake Giardiono \textit{et al}. report is startups' focus on technology and developing feature-rich product instead of validating the hypotheses of business idea in the first place, resulting in a working product without customers. The second pitfall is to focus on polished business model allowing to maximize profits before achieving problem/solution fit and addressing the needs of actual customers. Another issue is to neglect the learning process, which results in addressing specific challenges at the wrong time, for example, focusing on improving customer acquisition before receiving feedback from actual users. These mistakes account for a lot of wasted effort, resulting in using up both personal savings for strategy change (or "pivoting", using the Lean Startup terminology \citep{ries2011lean}) and motivation to run the company any longer. The last factor mentioned as crucial to teams' survival is the "entrepreneur's mindset" of team members, determining their flexibility to handle various, often non-engineering roles as well as highly passionate behavior of founders allowing them to do whatever it takes to overcome countless roadblocks.
+One area of research related to startups focuses on reasons behind a very high startup failure rate. \cite{giardino2014early} attempt to explain failure by performing multiple-case study, analyzing early-stage activities from market, product, team and business perspectives. The most common and costly mistake \citeauthor{giardino2014early} report is startups' focus on technology and developing feature-rich product instead of validating the hypotheses of business idea in the first place, resulting in a working product without customers. The second pitfall is to focus on polished business model allowing to maximize profits before achieving problem/solution fit and addressing the needs of actual customers. Another issue is to neglect the learning process, which results in addressing specific challenges at the wrong time, for example, focusing on improving customer acquisition before receiving feedback from actual users. These mistakes account for a lot of wasted effort, resulting in using up both personal savings for strategy change (or "pivoting", using the Lean Startup terminology) and motivation to run the company any longer. The last factor mentioned as crucial to teams' survival is the "entrepreneur's mindset" of team members, determining their flexibility to handle various, often non-engineering roles as well as highly passionate behavior of founders allowing them to do whatever it takes to overcome countless roadblocks.
 
 The above-mentioned findings seem to be consistent with Steve Blank's, who in his book about Customer Development \citep{blank2013four} suggests putting aside product development in order to test riskiest hypotheses first. It is important to discover and validate problem/solution fit and only then focus on building the right set of features needed by customers, that is achieving product/market fit.
 
@@ -191,19 +192,18 @@ Eric Ries built his Lean Startup methodology \citep{ries2011lean} on top of Blan
 
 As presented in the previous section, the Agile and UCD integration has been proven to be fairly well researched, so at the first glance it might seem that the problem has already been solved. The main focus of the Agile UX approach, though, is on coordination between the Agile and UX teams, and many startups, especially during the early stages, do not have separate UX teams. Adding startups' pressuring environment and resulting negligence to follow strict processes as well as the need to quickly create different prototypes to find the right problem/solution and product/market fits rather than just focusing on polishing one single product, the guidelines must be adapted accordingly.
 
-To prove this need further, Hokkanen and Mattila provide an interview study with eight startups in Finland \citep{hokkanen2015ux} and analyze their UX practices. All of the interviewed startups faced challenges in collecting meaningful information from users or customers and did not know how exactly to ask. They did not utilize their user pool due to difficulties with balancing between product development and business creation. Although most of the startups logged user data, they were often unable to extract meaningful information from it. In fact, "they did not have a clear plan on how to collect and analyze the feedback and data".
+To prove this need further, \cite{hokkanen2015ux} provide an interview study with eight startups in Finland and analyze their UX practices. All of the interviewed startups faced challenges in collecting meaningful information from users or customers and did not know how exactly to ask. They did not utilize their user pool due to difficulties with balancing between product development and business creation. Although most of the startups logged user data, they were often unable to extract meaningful information from it. In fact, "they did not have a clear plan on how to collect and analyze the feedback and data".
 
 Recently, researchers have started to explore this area and created a new set of practices and guidelines called the Lean UX approach.
 \subsection{The Lean UX Methodology}
-Gothel and Seiden, in their recent book, \textit{Lean UX}, \citep{gothelf2016lean} highlight three foundations upon which the Lean UX methodology is built:
+\citeauthor{gothelf2016lean}, in their recent book, \textit{Lean UX}, \citep{gothelf2016lean} highlight three foundations upon which the Lean UX methodology is built:
 \begin{itemize}
   \item User Experience Design
   \item The Agile Methodologies
   \item Eric Ries's Lean Startup Approach
 \end{itemize}
-In the area of UX, Gothel and Seiden focus on the Design Thinking approach, which allows to apply design methods to every aspect of business and expand boundaries typically imposed upon designers. In their definition of the Lean UX method, they state, "We work to build a shared understanding of the customer, their needs, our
-proposed solutions, and our definition of success", which sounds very similar to the User-Centered Design (UCD) related Goal-Directed Design.
-Laura Klein, in her book, \textit{UX for Lean Startups} \citep{klein2013ux}, describes how the Lean UX methodology builds upon three foundations:
+In the area of UX, Gothel and Seiden focus on the Design Thinking approach, which allows to apply design methods to every aspect of business and expand boundaries typically imposed upon designers. In their definition of the Lean UX method, they state, "We work to build a shared understanding of the customer, their needs, our proposed solutions, and our definition of success", which sounds very similar to the User-Centered Design (UCD) related Goal-Directed Design.
+\cite{klein2013ux}, in her book, \textit{UX for Lean Startups}, describes how the Lean UX methodology builds upon three foundations:
 \begin{itemize}
   \item UCD is enriched by frequent iterations, the Agile teams and validating hypotheses through measuring design outcomes in a scientific manner
   \item The Agile user stories are replaced with user hypotheses that can be either validated or invalidated before being considered "done"
@@ -219,7 +219,7 @@ Both of the above-mentioned books were first published in 2013, and in the early
   \item \textbf{Nimble design} over heavy wireframes, comps or specs
 \end{itemize}
 
-Liikkanen, Kilpiö, Svan and Hiltunen provide an experience report of trying to apply the Lean UX approach in a mid-sized Finnish software company \citep{liikkanen2014lean}. Major challenges included teaching UI developers user research skills, as they could not afford user researchers in each team and changing the developer's mindset about increments that were no longer defined by implemented features but by hypotheses. Especially since in case of invalidated hypothesis the code needed to be frequently refactored. Other challenges were organizational - outsourcing and distributed decision making (reduced team autonomy) were directly against the Lean UX philosophy of a close collaboration.
+\cite{liikkanen2014lean} provide an experience report of trying to apply the Lean UX approach in a mid-sized Finnish software company. Major challenges included teaching UI developers user research skills, as they could not afford user researchers in each team and changing the developer's mindset about increments that were no longer defined by implemented features but by hypotheses. Especially since in case of invalidated hypothesis the code needed to be frequently refactored. Other challenges were organizational - outsourcing and distributed decision making (reduced team autonomy) were directly against the Lean UX philosophy of a close collaboration.
 
 Research in this area is still very scarce. The above-mentioned sources, that is, two theoretical books, a manifesto and one brief case study are, as far as is known, the total sum of existing materials on this topic. There is a very clear need for more research on the Lean UX methodology.
 
@@ -243,7 +243,7 @@ Dance schools were chosen as a primary target as they represent a narrow-enough 
 \subsection{Methodology}
 In order to answer research questions, a case study analysis is presented in order to examine the decisions and progress made by the startup developing the DNCR project from June 22, 2016 to December 1, 2016, when the startup was disbanded, failing to complete the Minimal Viable Product and reach the market.
 
-In his book, \textit{Case Study Research}\citep{yin2013case}, Robert Yin lists five rationales for a single-case study design and the DNCR project case study fulfills three of them:
+In his book, \textit{Case Study Research}, \cite{yin2013case}, lists five rationales for a single-case study design and the DNCR project case study fulfills three of them:
 \begin{itemize}
 \item \textit{Representative or typical case} - each startup is undoubtedly a unique undertaking, but the DNCR project team was quite representative for a startup, demographically speaking: it consisted of mostly students finishing or having just finished their graduate IT studies, with some work experience and no previous startup experience
 \item \textit{Revelatory case} - as mentioned during state of the art discussion, there is hardly any research on attempts to apply the Lean Startup method and virtually no research analyzing startups in the light of the Lean UX approach
@@ -260,22 +260,22 @@ In a real-time longitudinal study, the researcher is in danger of losing objecti
 
 Moreover, there are common misconceptions about generalizability of single-case studies and validity of achieved conclusions.
 
-Bent Flyvbjerg \citep{flyvbjerg2006five} addresses both researcher bias and generalizability objections. Arguing against the former, Flyvbjerg notes that many experience reports lead to a belief that researchers are usually aware of this tendency and as a result "it is falsification, not verification, that characterizes the case study" and there is no greater bias than in any other scientific method. Flyvbjerg addresses the latter arguing that "formal generalization is overvalued as a source of scientific development" and that context-dependent, concrete knowledge is even more valuable than "predictive theories and universals".
+\cite{flyvbjerg2006five} addresses both researcher bias and generalizability objections. Arguing against the former, Flyvbjerg notes that many experience reports lead to a belief that researchers are usually aware of this tendency and as a result "it is falsification, not verification, that characterizes the case study" and there is no greater bias than in any other scientific method. Flyvbjerg addresses the latter arguing that "formal generalization is overvalued as a source of scientific development" and that context-dependent, concrete knowledge is even more valuable than "predictive theories and universals".
 
-Discussing generalizability, Meyer \citep{meyer2001case} expresses the need for a balance between in-depth, longitudinal studies providing a possibility to make judgments about applicability and greater generalizability offered by multi-case approach. Moreover, she notes that "generalisation is about theoretical propositions, not about populations".
+Discussing generalizability, \cite{meyer2001case} expresses the need for a balance between in-depth, longitudinal studies providing a possibility to make judgments about applicability and greater generalizability offered by multi-case approach. Moreover, she notes that "generalisation is about theoretical propositions, not about populations".
 
-Further discussing the case study limitations, Yin \citep{yin2013case} argues that a holistic case study can suffer from a "shift of case study nature" during the course of study, which may impact both initial approach and initial research questions. This, according to Yin, is the source of the greatest criticism of case studies, although, as assumptions change and new questions emerge, this flexibility can also be considered a strength.
+Further discussing the case study limitations, \cite{yin2013case} argues that a holistic case study can suffer from a "shift of case study nature" during the course of study, which may impact both initial approach and initial research questions. This, according to Yin, is the source of the greatest criticism of case studies, although, as assumptions change and new questions emerge, this flexibility can also be considered a strength.
 
-This shift has certainly taken place during the DNCR project, because due to the project failure, the discussion about methods applicable in a startup's lifecycle can only focus on the early-stage startup activities. This means that many important aspects of the Lean Startup methodology, most notably qualitative metrics allowing to test hypotheses, cannot be discussed, as the startup did not survive long enough to implement and use them. However, an analysis of factors leading to an early failure has proven to be illuminating on its own.
+This shift has certainly taken place during the DNCR project, because due to the project failure, the discussion about methods applicable in a startup's lifecycle can only focus on the early-stage startup activities. This means that many important aspects of the Lean Startup methodology, most notably qualitative metrics such as A/B testing allowing to test hypotheses about developed product, cannot be discussed, as the startup did not survive long enough to implement and use them. However, an analysis of factors leading to an early failure has proven to be illuminating on its own.
 
 \subsection{Research Questions}
 In methodological assessments of software projects in recent literature, there has been a general tendency to divide project activities into several categories.
 
-In their multiple-case study of an early-stage startup failure analysis, Giardino, Wang and Abrahamsson \citep{giardino2014early} propose four dimensions of evaluation, drawing upon the study of MacMillan \textit{et al}. \citep{macmillan1987criteria}: team, product, business and market.
+In their multiple-case study of an early-stage startup failure analysis, \cite{giardino2014early} propose four dimensions of evaluation, drawing upon the study of \cite{macmillan1987criteria}: team, product, business and market.
 
 Based on their systematic literature review of the Agile and User-Centered Design integration,  \cite{brhel2015exploring} propose a coding system to group all relevant aspects into four main categories: process, practices, people/social and technology.
 
-In "A survey study of critical success factors in Agile software projects" \cite{cao2008agile} at first present five dimensions most recently used in literature in failure/success research: organizational, people, process, technical and project. Then, based on their hypothesis testing result, \citeauthor{cao2008agile} list six success factors, presented from the most to least significant: delivery strategy, Agile software engineering techniques, team capability, project management process, team environment and customer involvement.
+In \textit{A survey study of critical success factors in Agile software projects} \cite{cao2008agile} at first present five dimensions most recently used in literature in failure/success research: organizational, people, process, technical and project. Then, based on their hypothesis testing result, \citeauthor{cao2008agile} list six success factors, presented from the most to least significant: delivery strategy, Agile software engineering techniques, team capability, project management process, team environment and customer involvement.
 
 Drawing upon the above proposed categories and including the Lean UX specific questions, this case study analysis will address the following research areas about the early-stage startup activities:
 
@@ -297,7 +297,7 @@ The project began on June 22, 2016, when one of the co-founders brought the idea
 
 A week later the team created a Minimal Viable Product (MVP) vision along with the initial list of requirements, revolving mainly around basic dance courses, attendees, instructors and payments management and email notifications. The team considered it the most basic "notebook replacement" version and scheduled the date of the first release for October, 2016, when the academic year starts, since students were one of the main targets of the dance schools and most courses would start then.
 
-\subsection{First month: Market Research}
+\subsection{Sprint 0: Market Research}
 During the first month, the team only knew they had one customer in need for their solution, and they needed to know a lot more.
 
 \subsubsection{Quantitative Local Market Analysis}
@@ -315,12 +315,12 @@ Afterwards, a more detailed competitive products analysis was performed, and the
 
 Nine of the identified solutions offered products in Polish, but they were mostly targeted at gyms and fitness centers. One direct competitor that focused on dance schools was identified, providing most of the intended DNCR features, but they were not actively marketing their product and expanding aggressively. Having evaluated their demonstration version, the team decided that there were many ways the experience could be improved.
 
-As far as dance course search engines go, there were two sites attempting to aggregate dance school and allow to search among them, but they both had the same problems - they featured very outdated data, inserted manually some time ago, poor searching capabilities and seemed to be more or less abandoned. The DNCR solution, as previously mentioned, would integrate with search engine, so that data would be always up to date. There is a capable search engine for Benefit Multisport Card customers, popular and honored card among the local dance schools, but its main problem is limitation to their customers. Some foreign search engines were identified, but they all limited their results to their chains of dance schools. The dance attendees survey showed that there appeared to be two most popular ways to search for dance courses online - via Facebook or Google, but although Google provides a nice visualization on the map and some opinions, whereas Facebook provides likes and reviews, neither of them offers an in-depth comparison of courses, with regard to their type, dates, required skill levels, etc.
+As far as the dance course search engines go, there were two sites attempting to aggregate dance school and allow to search among them, but they both had the same problems - they featured very outdated data, inserted manually some time ago, poor searching capabilities and seemed to be more or less abandoned. The DNCR solution, as previously mentioned, would integrate with search engine, so that data would be always up to date. There is a capable search engine for Benefit Multisport Card customers, popular and honored card among the local dance schools, but its main problem is limitation to their customers. Some foreign search engines were identified, but they all limited their results to their chains of dance schools. The dance attendees survey showed that there appeared to be two most popular ways to search for dance courses online - via Facebook or Google, but although Google provides a nice visualization on the map and some opinions, whereas Facebook provides likes and reviews, neither of them offers an in-depth comparison of courses, with regard to their type, dates, required skill levels, etc.
 
 \subsubsection{Market Research Conclusion}
 The team performed both qualitative and quantitative market and competition analysis and was confident that there was a market opportunity to explore, especially considering the demand for solutions outsides of Poland. Evaluating many related existing solutions allowed to explore many ways to implement business model (i.e. pricing and payment options), business domains to explore and user interface ideas and shortcomings. The team started drafting a business model document, and simultaneously to research and implementation efforts, the team looked for a way to legalize their company.
 
-\subsection{First month: Architecture and Technologies}
+\subsection{Sprint 0: Architecture and Technologies}
 The team consisted of six developers who worked on the desktop Java application on a daily basis and one developer experienced with PHP and web technologies. The architecture was pretty standard these days: it was decided that the DNCR would be a web app with a server, as it would be easiest to distribute and quickly introduce new changes, as well to introduce a web search engine later on.
 
 For the front-end, the team decided to create a Single-Page-App (SPA), as there were many frameworks with great support that would facilitate learning. Despite Facebook React's vast popularity, the team decided on the Angular framework from Google (despite it being beta before 2.0 version at that time), as it seemed more opinionated and provided a more complete, all-in-one solution that would be the easiest to grasp by the team consisting mostly of developers inexperienced with web technologies. The typescript was chosen instead of Javascript, as it was both promoted by Angular and the team used to static typing was enthusiastic about retaining some typing capabilities.
@@ -339,120 +339,121 @@ Another decision was made to use lightweight virtualization for the development 
 
 For an easy collaboration, the team initially used Asana, but after a month switched to Trello to manage amount of work in progress (WIP) via Kanban board. For Git, private GitHub repository was used and all the tools were integrated with instant messaging tool, Slack.
 
-\subsection{Next months: Focus on Implementation}
-After market research to gain confidence in the initial direction of the project was carried out, technological decisions were made and the developer environment all set up, in late July the team decided to focus all efforts on implementation in order to have the MVP ready for October.
+\subsection{Next Sprints: Focus on Implementation}
+After market research to gain confidence in the initial direction of the project was carried out, technological decisions were made and the developer environment was all set up, in late July the team decided to focus all efforts on implementation in order to have the MVP ready for October.
 
-By this point in time one of the team members had to resign due to personal reasons, but other six developers looked optimistically into the implementation phase.
+By this point in time one of the team members had to resign due to personal reasons, but other six developers looked optimistically towards the implementation phase.
 
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{gui-sketch}
-    \caption{Low fidelity GUI sketch presenting calendar and selected course in single view}
+    \caption{A low fidelity GUI sketch presenting calendar and selected course in single view}
     \label{fig:gui-sketch}
 \end{figure}
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{gui-balsamic}
-    \caption{High fidelity GUI prototype using Balsamic program, same view as presented in Figure \ref{fig:gui-sketch}}
+    \caption{A high fidelity GUI prototype using Balsamic program, same view as presented in Figure \ref{fig:gui-sketch}}
     \label{fig:gui-balsamic}
 \end{figure}
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{gui-angular}
-    \caption{Actual application in Angular, same view as in Figures \ref{fig:gui-sketch} and \ref{fig:gui-balsamic}.} 
+    \caption{An actual application in Angular, same view as in Figures \ref{fig:gui-sketch} and \ref{fig:gui-balsamic}.} 
     \label{fig:gui-angular}
 \end{figure}
 
-\subsubsection{Mockups and GUI vision}
-A very important aspect of the project was Graphical User Interface (GUI), because one of main problems it was solving was manual and repetitious actions needed to be performed by dance school receptionist - the team was aiming to make them easy and convenient. From the beginning it was clear that interface would evolve around calendar view. At first the team discussed the GUI using low-fidelity sketch on paper, and then, for implementation reference, as well as for GUI validation with the client, high-fidelity GUI prototype was prepared using Balsamic program. Figures \ref{fig:gui-sketch}, \ref{fig:gui-balsamic} and \ref{fig:gui-angular} present the same view evolution from low-fidelity sketch to actual application.
+\subsubsection{Mockups and GUI Vision}
+The Graphical User Interface (GUI) was a very important aspect of the project because one of the main problems to be solved was the elimination of manual and repetitious actions that had to be performed by a dance school receptionist. The team aimed to make the user interface easy and convenient. It was clear from the beginning that the interface would evolve around a calendar view. At first, the team discussed the GUI using a low-fidelity sketch on paper, and then, for an implementation reference as well as for a GUI validation with the client, a high-fidelity GUI prototype was prepared using the Balsamic program. Figures \ref{fig:gui-sketch}, \ref{fig:gui-balsamic} and \ref{fig:gui-angular} present the same view evolution from a low-fidelity sketch to the actual application.
 
-\subsubsection{Meeting with the client and design validation}
-On 12th of August the team representatives met with the client to verify created design. The client was shown interactive prototype achieved using Balsamic Links, that is buttons on static wireframes linked to another static wireframes, producing the illusion of full interactivity. The client enjoyed the prototype and was satisfied with the simplicity of design. He then proposed various additional features to be added in later phase of the project - different client types and award system (features from loyalty program software he was acquainted with), integration with his school's website, attendance visualization and checking attendance via QR-codes or special electronic card. After discussion it was agreed that after MVP is done these features would be revisited.
+\subsubsection{Client Meeting and Design Validation}
+On August 12, the team representatives met with a client to verify the created design. The client was shown an interactive prototype achieved through the use of Balsamic Links, i.e. buttons on static wireframes linked to other static wireframes, producing an illusion of full interactivity. The client found the prototype to his liking and was satisfied with the simplicity of the design. He then suggested an incorporation of various additional features in the later phase of the project, such as different client types and an award system (features from the loyalty program software he was familiar with), integration with his school's website, attendance visualization and checking attendance via QR-codes or a special electronic card. After the discussion, it was agreed that after the MVP was completed, the idea of adding these features would be revisited.
 
 % \FloatBarrier
-\subsubsection{Collaboration model}
-The team decided that all 6 developers on the team would be working "full-stack", that is both on back-end and front-end side of the app in order for each developer to have sufficient autonomy to quickly implement full business features. As mentioned earlier, only one developer was previously acquainted (and in his case, proficient) with used technologies. The team accepted initial slow-down for everyone to learn technologies and predicted to gain traction after few weeks.
+\subsubsection{The Collaboration Model}
+The team decided that all six developers on the team would be working "full-stack", that is, both on the back-end and front-end sides of the app so that each developer would have a sufficient autonomy in order to quickly implement full business features. As mentioned earlier, only one developer had been previously acquainted (and in his case, proficient) with the used technologies. The team accepted an initial slow-down for everyone to learn the technologies and predicted to gain traction after a few weeks.
 
-As most of the team worked only part-time on the project and the team naturally did not have dedicated workplace for their needs at that point, 4 team members agreed to work daily in the morning at agreed time before work - 7:00 a.m., while two others preferred later hours. The goal was to minimize feedback-loop between team members, so each question / interaction / review wouldn't have to wait a few days for response, unnecessarily prolonging each task completion. Moreover, the team decided to meet every month to discuss progress, areas to improve and general direction and strategy.
+As most of the team worked only part-time on the project and the team naturally did not have a dedicated workplace for their needs at that point, four team members agreed to work daily in the morning at an agreed time before work - 7:00 a.m., while two other members preferred later hours. The goal was to minimize the feedback-loop between team members, so each question / interaction / review would not have to wait a few days for response, unnecessarily prolonging the completion of each task. Moreover, the team decided to meet every month to discuss progress, areas to improve and the general direction and strategy.
 
-\subsubsection{August - implementation progress}
-In August first features started to appear:
+\subsubsection{Sprint 2: Implementation Progress (August)}
+In August, the first features of the project began to appear:
 \begin{itemize}
-\item Login page
-\item Initial, basic version of landing page to promote product
+\item The login page
+\item An initial, basic version of the landing page in order to promote product
 \item Basic manager (admin) and receptionist views
 \item Adding new attendees
 \end{itemize}
-Furthermore, database schema was created and online payment intermediaries research was performed in order to prepare ground for the ability to pay for courses online.
+Furthermore, the database schema was created and online payment intermediaries research was performed in order to prepare the ground for the possibility to pay for the courses online.
 
-By this time it became clear that working remotely proved to be a bigger challenge than the team expected - only 2 members worked regularly each morning as was agreed on and 2 members didn't make progress on any task.
+By this time, it became clear that working remotely proved to be a bigger challenge than the team expected. Only two members of the team worked regularly each morning as was agreed on and two members did not make progress on any task.
 
-\subsubsection{September - implementation progress}
-Features implemented in September:
+\subsubsection{Sprint 3: Implementation Progress (September)}
+The following features were implemented in September:
 \begin{itemize}
-\item Login authentication
-\item Attendees list view
+\item The login authentication
+\item An attendees list view
 \item Adding dance instructors and instructors list view
-\item Calendar component presenting courses
+\item A calendar component presenting courses
 \end{itemize}
-It's worth noting that all of mentioned tasks had very broad definition of done - each task included front-end and back-end validation, handling different sizes of display (via Bootstrap framework responsive capabilities), and even elegant back-end internationalization, which resulted in very long implementation and review periods - some tasks took few weeks to be implement and then few additional weeks to be thoroughly reviewed.
+It is worth noting that all of the above-mentioned tasks fell under a very broad definition of "done". Each task included the front-end and back-end validation, handling different sizes of display (via Bootstrap framework responsive capabilities), and even an elegant back-end internationalization, which resulted in very long implementation and review periods. The implementation of some tasks took a few weeks and then it took a few additional weeks to thoroughly review them.
 
-It started to become clear that MVP by October is out of the question - the team decided to focus less on polishing the product and to start creating more granular tasks, so new features could be added more quickly. Another enthusiastically received idea was to create "hackatons", that is long whole-team programming sessions, where 1 technology experienced developer would coach others during their work.
+It started to become clear that the MVP by October was out of the question. The team decided to focus less on polishing of the product and to start creating more granular tasks, so new features could be added more quickly. Another enthusiastically received idea was to create "hackatons", that is, long whole-team programming sessions, where one technology experienced developer would coach others in their work.
 
-\subsubsection{October - implementation progress}
-October progress:
+\subsubsection{Sprint 4: Implementation Progress (October)}
+The October progress:
 \begin{itemize}
-\item Dance course creation
-\item Attendee details / profile view
-\item Authorization improvement - automatic token refreshing so user is not logged out during application usage
+\item A dance course creation
+\item The attendee details / profile view
+\item The authorization feature improvement: an automatic token refreshing so that a user would not be logged out during the application usage
 \end{itemize}
 
-Despite discussion on too long task implementation period in previous month, in October the problem became even worse due to even less regular working schedule combined with inability to schedule "hackatons". Consequently, motivation was plummeting and team members were clearly not spending promised amount of work on project. Intervention was needed and so in order to improve work consistency and motivation, the team decided to log worked hours and change ad-hoc "Stand-ups" (officially called "Daily Scrum Meetings" held to summarize work progress and discussion of eventual impediments) to obligatory weekly "Stand-ups" where each team member would present their weekly work log.
+Despite numerous discussions on task implementation taking too long in the previous month, in October the problem worsened due to an even less regular working schedule combined with the inability to schedule "hackatons". Consequently, motivation was plummeting and the team members were clearly not spending the promised amount of time working on the project. An intervention was needed and in order to improve work consistency, motivation and to increase morale, the team decided to log worked hours and change ad-hoc "Stand-ups" (officially called "Daily Scrum Meetings" held to summarize work progress and discussion of eventual impediments) to obligatory weekly "Stand-ups" where each team member would present their weekly work log.
 
-\subsubsection{November - implementation progress}
+\subsubsection{Sprint 5: Implementation Progress (November)}
+The following features were implemented in November:
 \begin{itemize}
-\item Multi-tenancy - application could now handle multiple dance schools 
-\item Payments - receptionist could insert attendee payment with one of several available methods
+\item Multi-tenancy - the application could now handle multiple dance schools 
+\item Payments - a receptionist could insert an attendee payment with one of several available methods
 \item Application-wide notifications
-\item Email sending to attendees
-\item Visual indication of attendee payment status
+\item Mail tool for communication with attendees
+\item A visual indication of an attendee payment status
 \item Dance course editing and handling multiple course times
 \end{itemize}
-As features implemented in November might indicate progress, in fact most of them was just a result of implementation effort during October. In November feature-creation cycle was even longer and work-logging and weekly "Stand-ups" were of little help, as most members spent less and less time on a project.
+Although the features implemented in November might indicate progress, in fact, most of them were just a result of implementation efforts made during the month of October. In November, the feature-creation cycle took even longer and work-logging and weekly "Stand-ups" were of little help, as most members spent less and less time on the project.
 
-\paragraph{Meeting with subject matter expert}
-On 12th of November the team representative met with subject matter expert - an acquainted senior ballroom dancer who organizes dance tournaments and who is knowledgeable about targeted market and has collaborated with various dance schools. 
+\paragraph{Meeting with a Subject Matter Expert}
+On November 12 a team representative met with a subject matter expert, a senior ballroom dancer who organized dance tournaments, was knowledgeable about the target market and had collaborated with various dance schools. 
 
-First part of the meeting consisted of loosely designed usability test - the expert saw the application for the first time and knowing what the application does, he was supposed to discover application capabilities by himself, without any guidance. His interaction was observed and all remarks and troubles were noted.
+The first part of the meeting consisted of a loosely designed usability test: the expert saw the application for the first time and knowing the objective of the application, he was supposed to discover the application capabilities by himself without any guidance. His interaction was observed and all remarks and troubles were recorded.
 
-As a result, 18 improvements were proposed and discussed, ranging from major usability flaws like inability to add existing attendee to another dance class (GUI for adding attendee to course only allowed for creating new ones) to various features the team hasn't yet considered, but are integral part of schools business procedure - how to handle "waiting lists" when dance class reaches participants limit or someone waits for the course to start in the future? Is somebody enrolled to course only when one pays, or just when one expresses interest and gives his data? How to handle bonus visits and coupons for clients for several entries for any course? How to handle courses designed for "pairs" only? And many other similar aspects not previously considered.
+As a result, eighteen improvements were suggested and discussed, ranging from major usability flaws like the inability to add an existing attendee to another dance class (the GUI for adding attendees to a course only allowed for creating new ones) to various features the team had not yet considered, but which were an integral part of the schools' business procedures, e.g., how to handle "waiting lists" when a dance class reached the participants' limit or someone waited for the course to start in the future? Would the registrants be considered as enrolled in a course after they expressed interest and provided their data, or only after they submitted the payment? How to handle bonus visits and coupons for clients who could attend several classes in a given course? How to handle courses designed "for couples" only? And many other similar aspects not previously considered.
 
-During the second part of the meeting business model was discussed, in particular online payments viability for dance schools and due to various legal reasons (i.e. concerning fiscal evidence) this feature was decided to be postponed and substituted with plain email with reminder about due (or incoming) payments and dance schools bank account - as a easier way to validate the idea with less legal consequences.
+During the second part of the meeting, the business model was discussed, in particular the online payments viability for dance schools and due to various legal reasons (i.e. fiscal evidence), it was decided to postpone the development of this feature and to substitute it with a plain email reminder about due (or upcoming) payments with the dance schools' bank account information, as an easier way to validate the idea with fewer legal consequences.
 
-\subsection{Decision to end the project}
-After consultation with each team member about their individual reasons for constantly decreasing commitment, finally, during a meeting on 1st of December the decision has been made to end the project. The team decided to open-source the code on GitHub (\url{https://github.com/tlegutko/dncr}), the client would be proposed to evaluate competitive software and the team did "Project Retrospective" to discuss what went well and what were the lessons learned.
+\subsection{Sprint 6: Decision to End the Project (December)}
+Eventually, after a consultation with each team member about their individual reasons for the constantly decreasing commitment, during a meeting on December 1, the decision was made to end the project. The team decided to open-source the code on GitHub (\url{https://github.com/tlegutko/dncr}), the client would be offered a possibility to evaluate competitive software and the team did a "Project Retrospective" to discuss what went well and what lessons were learned.
 
-The team's December discussion is presented in Section \ref{sec:dncr-proj-eval} as the beginning of project evaluation.
+The team's December discussion and conclusions are presented in Section \ref{sec:dncr-proj-eval} as part of the project evaluation.
 
-\section{DNCR project evaluation}
+\section{The DNCR Project Evaluation}
 \label{sec:dncr-proj-eval}
-This section starts with project evaluation performed by the whole team on the day the project ended and continues with answers to research questions specified at the end of Section \ref{sec:probl-form-meth}.
+This section begins with the project evaluation performed by the whole team on the day the project ended and proceeds to address the research questions specified at the end of Section \ref{sec:probl-form-meth}.
 
-\subsection{DNCR retrospective meeting}
-The whole team met 1st of December and made the decision to end the project. Then the team proceeded to "project retrospective" in order to discuss strengths and weaknesses of the project.
+\subsection{The DNCR Retrospective Meeting}
+The whole team met on December 1 and made the decision to end the project. Then the team proceeded to do a "project retrospective" in order to discuss strengths and weaknesses of the project.
 
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{dncr-funeral}
-    \caption{DNCR project summary made collaboratively by the whole team during the meeting when the decision has been made to discontinue the project}
+    \caption{The DNCR project summary made collaboratively by the whole team during the meeting when the decision was made to discontinue the project}
     \label{fig:dncr-funeral}
 \end{figure}
 \FloatBarrier
 
-\subsubsection{What went well}
+\subsubsection{What Went Well: The Project's Successes}
 
 Among the positive aspects of the project the team listed:
 \begin{itemize}
-\item Technology stack - although many team members didn't manage to become productive in it, it was drastically different experience from what most of them used daily at work and it allowed them to learn a lot
-\item Experience of first startup, as it often takes several failed attempts before successful one
-\item Learning about many legal and financial aspects, how much it costs to sustain private firm, how much it costs to start limited liability company and what are the best options when using online payments intermediaries
-\item Swift, albeit slightly too late decision to end the project when it became clear it wouldn't lead anywhere. Also the fact that project was rather well defined and had client from the start, so the initial goal was clear
+\item Technology stack - although many team members did not manage to become productive in it, it was a drastically different experience from what most of them did daily at work and it allowed them to learn a lot
+\item The first startup experience – as it often takes several failed attempts before a successful one
+\item Learning about many legal and financial aspects: how much it costs to sustain a private firm, how much it costs to start a limited liability company and what are the best options when using online payments intermediaries
+\item A swift, albeit slightly too late decision to end the project, when it became clear it would not lead anywhere. Also the fact that project was rather well defined and had a client from the start, so the initial goal was clear
 \item The team enjoyed collaborating together and working on project outside paid work allowed them to learn a lot about aspects of team motivation. The team appreciated various methods that were attempted to make collaboration work (retrospectives, idea for guided hackatons, work logging and others)
 \item Open-sourcing the project, which leaves public trace of performed work, which can be very useful, i.e. it can be added to CVs
 \end{itemize}
